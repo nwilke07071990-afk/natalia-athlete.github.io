@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Natalia Athlete</title>
 
 <style>
@@ -13,30 +14,31 @@
 }
 
 body{
-    font-family:Arial,sans-serif;
+    font-family:Arial, sans-serif;
     background:#000;
     color:white;
 }
 
 .hero{
     height:100vh;
-    background:linear-gradient(to bottom,#2d7cff,#8fc7ff);
+    background:linear-gradient(to bottom,#5ea4ff,#8ec5ff);
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
     text-align:center;
+    padding:20px;
 }
 
-h1{
+.hero h1{
     font-size:4rem;
     margin-bottom:20px;
 }
 
-p{
+.hero p{
     font-size:1.4rem;
     max-width:700px;
-    padding:20px;
+    line-height:1.5;
 }
 
 .button{
@@ -47,6 +49,25 @@ p{
     text-decoration:none;
     border-radius:30px;
     font-weight:bold;
+    font-size:1.2rem;
+}
+
+.gallery{
+    background:black;
+    padding:50px 20px;
+    text-align:center;
+}
+
+.gallery h2{
+    font-size:3rem;
+    margin-bottom:30px;
+}
+
+.gallery img{
+    width:90%;
+    max-width:400px;
+    border-radius:20px;
+    box-shadow:0 0 20px rgba(255,255,255,0.2);
 }
 </style>
 </head>
@@ -61,15 +82,16 @@ p{
         and fitness journey beginning on July 7th, 2010.
     </p>
 
-    <a class="button" href="#">
+    <a href="#gallery" class="button">
         Explore My Journey
     </a>
 </section>
-<h2 style="margin-top:50px;">Gallery</h2>
 
-<img
-    src="Screenshot_20260701_224316_Gallery.jpg"
-    style="width:90%;max-width:400px;border-radius:15px;margin:20px auto;display:block;"
->
+<section class="gallery" id="gallery">
+    <h2>Gallery</h2>
+
+    <img src="bild.jpg" alt="Natalia Athlete">
+</section>
+
 </body>
 </html>
