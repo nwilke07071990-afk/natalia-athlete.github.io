@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,15 +20,23 @@ body{
 }
 
 .hero{
-    min-height:30vh;
-padding:60px 20px;
+    min-height:60vh;
     background:linear-gradient(to bottom,#5ea4ff,#8ec5ff);
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
     text-align:center;
-    
+    padding:60px 20px;
+}
+
+.profil{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid white;
+    margin-bottom:25px;
 }
 
 .hero h1{
@@ -37,9 +45,9 @@ padding:60px 20px;
 }
 
 .hero p{
-    font-size:1.4rem;
+    font-size:1.3rem;
     max-width:700px;
-    line-height:1.5;
+    line-height:1.6;
 }
 
 .button{
@@ -50,25 +58,52 @@ padding:60px 20px;
     text-decoration:none;
     border-radius:30px;
     font-weight:bold;
+    font-size:1.1rem;
+}
+
+.about{
+    background:#111;
+    padding:70px 20px;
+    text-align:center;
+}
+
+.about h2{
+    font-size:3rem;
+    margin-bottom:30px;
+}
+
+.about p{
+    max-width:800px;
+    margin:20px auto;
     font-size:1.2rem;
+    line-height:1.8;
+    color:#dddddd;
 }
 
 .gallery{
     background:black;
-    padding:50px 20px;
+    padding:60px 20px;
     text-align:center;
 }
 
 .gallery h2{
     font-size:3rem;
-    margin-bottom:30px;
+    margin-bottom:40px;
 }
 
 .gallery img{
     width:90%;
-    max-width:400px;
+    max-width:450px;
+    margin:15px;
     border-radius:20px;
     box-shadow:0 0 20px rgba(255,255,255,0.2);
+}
+
+.footer{
+    background:#111;
+    text-align:center;
+    padding:30px;
+    color:#999;
 }
 </style>
 </head>
@@ -76,6 +111,9 @@ padding:60px 20px;
 <body>
 
 <section class="hero">
+
+    <img src="profil.jpg" class="profil">
+
     <h1>Natalia Athlete</h1>
 
     <p>
@@ -86,15 +124,51 @@ padding:60px 20px;
     <a href="#gallery" class="button">
         Explore My Journey
     </a>
+
 </section>
 
+<section class="about">
+
+    <h2>About Me</h2>
+
+    <p>
+        Welcome to my personal fitness journey.
+    </p>
+
+    <p>
+        My passion for strength training and athletic performance
+        began in 2010 and continues to inspire me every day.
+    </p>
+
+    <p>
+        Through dedication, discipline, and years of experience,
+        I have developed my own approach to strength, fitness,
+        and athletic performance.
+    </p>
+
+    <p>
+        This website documents my journey,
+        favorite moments, and personal achievements.
+    </p>
+
+</section>
 
 <section class="gallery" id="gallery">
 
-    <<h2>Gallery</h2>
+    <h2>Gallery</h2>
 
-<img src="bild1.jpg">
-<img src="bild2.jpg">
+    <img src="bild1.jpg">
+    <img src="bild2.jpg">
+    <img src="bild3.jpg">
+    <img src="bild4.jpg">
+    <img src="bild5.jpg">
+    <img src="bild6.jpg">
+
 </section>
+
+<section class="footer">
+    © 2026 Natalia Athlete
+</section>
+
 </body>
 </html>
