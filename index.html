@@ -1,13 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Test</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Natalia Athlete</title>
+
+<style>
+body{
+    background:black;
+    color:white;
+    font-family:Arial;
+    margin:0;
+}
+
+nav{
+    background:#111;
+    padding:20px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:20px;
+    font-weight:bold;
+}
+
+.hero{
+    height:400px;
+    background:#222;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+
+.hero h1{
+    font-size:50px;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    padding:20px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:15px;
+}
+
+</style>
 </head>
 
-<body style="background:black;color:white;font-family:Arial;text-align:center;padding-top:100px;">
+<body>
 
-<h1>Website works!</h1>
-<p>Natalia Athlete</p>
+<nav>
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Gallery</a>
+<a href="#">Contact</a>
+</nav>
+
+<div class="hero">
+    <h1>Natalia Athlete</h1>
+    <p>Official Portfolio</p>
+</div>
+
+<div class="gallery">
+    <img src="profil.jpg">
+    <img src="bodensee_front.jpg">
+</div>
 
 </body>
 </html>
