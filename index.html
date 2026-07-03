@@ -7,10 +7,12 @@
 <title>Natalia Athlete</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+    scroll-behavior:smooth;
 }
 
 body{
@@ -19,161 +21,288 @@ body{
     color:white;
 }
 
+/* Navigation */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:rgba(0,0,0,0.8);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+    padding:20px;
+}
+
+nav ul{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    list-style:none;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:1rem;
+}
+
+/* Hero */
+
 .hero{
-    min-height:100vh;
+    height:100vh;
     background:
-    linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),
-    url("hero.jpg");
+    linear-gradient(rgba(0,0,0,.45),
+                    rgba(0,0,0,.65)),
+    url('hero.jpg');
+
     background-size:cover;
     background-position:center;
+
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
     text-align:center;
+
     padding:20px;
 }
 
 .hero h1{
-    font-size:4rem;
+    font-size:4.5rem;
     margin-bottom:20px;
-    text-shadow:0 0 20px black;
 }
 
 .hero p{
-    font-size:1.3rem;
-    max-width:700px;
-    line-height:1.6;
-    text-shadow:0 0 10px black;
-}
-
-.button{
-    margin-top:30px;
-    padding:15px 35px;
-    background:white;
-    color:black;
-    text-decoration:none;
-    border-radius:30px;
-    font-weight:bold;
-}
-
-.about{
-    background:#111;
-    padding:70px 20px;
-    text-align:center;
-}
-
-.profil{
-    width:180px;
-    height:180px;
-    border-radius:50%;
-    object-fit:cover;
-    border:4px solid white;
-    margin-bottom:30px;
-}
-
-.about h2{
-    font-size:3rem;
-    margin-bottom:30px;
-}
-
-.about p{
-    max-width:800px;
-    margin:20px auto;
-    line-height:1.8;
-    color:#ddd;
-}
-
-.gallery{
-    background:black;
-    padding:60px 20px;
-    text-align:center;
-}
-
-.gallery h2{
-    font-size:3rem;
+    font-size:2rem;
     margin-bottom:40px;
 }
 
-.gallery img{
-    width:90%;
-    max-width:500px;
-    margin:15px;
-    border-radius:20px;
-    box-shadow:0 0 20px rgba(255,255,255,0.2);
+.button{
+    background:white;
+    color:black;
+    padding:18px 45px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:1.2rem;
     transition:0.3s;
 }
 
-.gallery img:hover{
+.button:hover{
+    transform:scale(1.05);
+}
+
+/* About */
+
+.about{
+    padding:100px 25px;
+    text-align:center;
+    background:#050505;
+}
+
+.profile{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:50%;
+    border:6px solid white;
+    margin-bottom:40px;
+}
+
+.about h2{
+    font-size:4rem;
+    margin-bottom:40px;
+}
+
+.about p{
+    max-width:900px;
+    margin:auto;
+    font-size:1.4rem;
+    line-height:2;
+    color:#dddddd;
+}
+
+/* Gallery */
+
+.gallery{
+    padding:100px 20px;
+}
+
+.gallery h2{
+    text-align:center;
+    font-size:4rem;
+    margin-bottom:60px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.grid img{
+    width:100%;
+    border-radius:25px;
+    transition:0.3s;
+    box-shadow:
+    0 0 20px rgba(255,255,255,0.1);
+}
+
+.grid img:hover{
     transform:scale(1.03);
 }
 
-.footer{
+/* Stats */
+
+.stats{
+    background:#080808;
+    padding:100px 20px;
+}
+
+.stats h2{
+    text-align:center;
+    font-size:4rem;
+    margin-bottom:60px;
+}
+
+.stats-grid{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:50px;
+}
+
+.stat{
+    text-align:center;
+}
+
+.stat h3{
+    font-size:3rem;
+}
+
+.stat p{
+    color:#aaa;
+    margin-top:10px;
+}
+
+/* Footer */
+
+footer{
     background:#111;
     text-align:center;
-    padding:30px;
+    padding:40px;
     color:#888;
 }
+
 </style>
 </head>
 
 <body>
 
+<nav>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#stats">Journey</a></li>
+</ul>
+</nav>
+
 <section class="hero">
 
-    <h1>Natalia Athlete</h1>
+<h1>Natalia Athlete</h1>
 
-    <p>
-        Strength • Discipline • Performance
-    </p>
+<p>
+Strength • Discipline • Performance
+</p>
 
-    <a href="#gallery" class="button">
-        Explore My Journey
-    </a>
-
-</section>
-
-
-<section class="about">
-
-    <img src="profil.jpg" class="profil">
-
-    <h2>About Me</h2>
-
-    <p>
-        Welcome to my personal fitness journey.
-    </p>
-
-    <p>
-        Since 2010, strength training and athletic performance
-        have been my passion and motivation.
-    </p>
-
-    <p>
-        This website documents my journey,
-        favorite moments and athletic achievements.
-    </p>
+<a href="#gallery" class="button">
+Explore My Journey
+</a>
 
 </section>
 
+<section class="about" id="about">
+
+<img src="profil.jpg" class="profile">
+
+<h2>About Me</h2>
+
+<p>
+Welcome to my personal fitness journey.
+</p>
+
+<br><br>
+
+<p>
+Since 2010, strength training and athletic
+performance have been my passion,
+motivation and lifestyle.
+</p>
+
+<br><br>
+
+<p>
+This website documents my journey,
+favorite moments and athletic achievements
+through dedication, discipline and
+continuous self-improvement.
+</p>
+
+</section>
 
 <section class="gallery" id="gallery">
 
-    <h2>Gallery</h2>
+<h2>Gallery</h2>
 
-    <img src="bodensee_front.jpg">
-    <img src="bodensee_back.jpg">
-    <img src="bodyposes.jpg">
-    <img src="montreal.jpg">
-    <img src="white.jpg">
-    <img src="canada.jpg">
+<div class="grid">
+
+<img src="bodensee_front.jpg">
+
+<img src="bodensee_back.jpg">
+
+<img src="bodyposes.jpg">
+
+<img src="canada.jpg">
+
+<img src="montreal.jpg">
+
+<img src="white.jpg">
+
+</div>
 
 </section>
 
+<section class="stats" id="stats">
 
-<section class="footer">
-    © 2026 Natalia Athlete
+<h2>Athletic Journey</h2>
+
+<div class="stats-grid">
+
+<div class="stat">
+<h3>2010</h3>
+<p>Journey Started</p>
+</div>
+
+<div class="stat">
+<h3>15+</h3>
+<p>Years Training</p>
+</div>
+
+<div class="stat">
+<h3>100%</h3>
+<p>Dedication</p>
+</div>
+
+</div>
+
 </section>
+
+<footer>
+© 2026 Natalia Athlete
+</footer>
 
 </body>
 </html>
