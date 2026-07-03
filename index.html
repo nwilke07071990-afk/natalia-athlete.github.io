@@ -6,9 +6,8 @@
 
 <title>Natalia Athlete | Official Portfolio</title>
 
-<meta name="description" content="Official fitness and athletic portfolio of Natalia Athlete">
+<meta name="description" content="Official fitness portfolio of Natalia Athlete">
 
-<!-- GoatCounter -->
 <script data-goatcounter="https://natalia-athlete.goatcounter.com/count"
 async src="//gc.zgo.at/count.js"></script>
 
@@ -20,52 +19,44 @@ padding:0;
 box-sizing:border-box;
 }
 
+body{
+background:#000;
+color:white;
+font-family:Arial,Helvetica,sans-serif;
+}
+
 html{
 scroll-behavior:smooth;
 }
-
-body{
-font-family:Arial,Helvetica,sans-serif;
-background:#000;
-color:#fff;
-overflow-x:hidden;
-}
-
-/* NAVIGATION */
 
 nav{
 position:fixed;
 top:0;
 width:100%;
+background:#000;
 padding:20px;
-background:rgba(0,0,0,.92);
-backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+nav ul{
 display:flex;
 justify-content:center;
-gap:40px;
-z-index:1000;
+gap:30px;
+list-style:none;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-font-weight:700;
-font-size:17px;
-transition:.3s;
+font-size:18px;
+font-weight:bold;
 }
-
-nav a:hover{
-opacity:.7;
-}
-
-/* HERO */
 
 .hero{
 height:100vh;
 background:
-linear-gradient(rgba(0,0,0,.35),
-rgba(0,0,0,.80)),
-url('bodensee_front.jpg');
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.8)),
+url('hero.jpg');
 background-size:cover;
 background-position:center;
 display:flex;
@@ -74,36 +65,26 @@ align-items:center;
 text-align:center;
 }
 
-.hero-content{
-padding:20px;
-}
-
 .hero h1{
-font-size:clamp(50px,10vw,110px);
-font-weight:900;
+font-size:70px;
 }
 
 .hero p{
-font-size:clamp(18px,3vw,30px);
+font-size:28px;
 margin-top:20px;
-color:#ddd;
 }
 
-/* GENERAL */
-
 section{
+padding:80px 20px;
 max-width:1400px;
 margin:auto;
-padding:100px 20px;
 }
 
 h2{
-font-size:clamp(36px,5vw,60px);
 text-align:center;
-margin-bottom:50px;
+font-size:42px;
+margin-bottom:40px;
 }
-
-/* ABOUT */
 
 .about{
 text-align:center;
@@ -112,117 +93,80 @@ text-align:center;
 .about img{
 width:220px;
 height:220px;
-border-radius:50%;
 object-fit:cover;
-border:5px solid white;
-box-shadow:0 0 30px rgba(255,255,255,.2);
+border-radius:50%;
+border:4px solid white;
 }
 
 .about p{
 max-width:900px;
-margin:40px auto;
+margin:30px auto;
 font-size:20px;
 line-height:1.8;
-color:#ddd;
 }
-
-.stats{
-display:grid;
-grid-template-columns:
-repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-margin-top:60px;
-}
-
-.card{
-background:#111;
-padding:35px;
-border-radius:20px;
-text-align:center;
-box-shadow:0 0 20px rgba(255,255,255,.05);
-}
-
-.card h3{
-font-size:40px;
-margin-bottom:10px;
-}
-
-/* CATEGORY */
-
-.category{
-margin-top:90px;
-}
-
-.category h3{
-text-align:center;
-font-size:34px;
-margin-bottom:35px;
-}
-
-/* GALLERY */
 
 .gallery{
 display:grid;
 grid-template-columns:
-repeat(auto-fit,minmax(280px,1fr));
+repeat(auto-fit,minmax(300px,1fr));
 gap:25px;
 }
 
 .gallery img{
 width:100%;
-border-radius:18px;
+border-radius:20px;
 cursor:pointer;
 transition:.3s;
-box-shadow:0 0 25px rgba(255,255,255,.08);
 }
 
 .gallery img:hover{
 transform:scale(1.03);
 }
 
-/* CONTACT */
+.category{
+margin-top:80px;
+}
+
+.category h3{
+text-align:center;
+font-size:32px;
+margin-bottom:30px;
+}
 
 .contact{
 display:flex;
-flex-wrap:wrap;
 justify-content:center;
-gap:30px;
+flex-wrap:wrap;
+gap:20px;
 }
 
-.contact-card{
+.box{
 background:#111;
 padding:30px;
 border-radius:20px;
-width:320px;
+width:300px;
 text-align:center;
 }
 
-.contact-card a{
+.box a{
 color:white;
 text-decoration:none;
 }
 
-/* VISITORS */
-
-.visitors{
+.visitor{
 background:#111;
 padding:40px;
 border-radius:20px;
-margin-top:60px;
 text-align:center;
 }
-
-/* FOOTER */
 
 footer{
-margin-top:100px;
-padding:50px;
 background:#111;
+padding:40px;
 text-align:center;
+margin-top:80px;
 color:#aaa;
 }
-
-/* LIGHTBOX */
 
 .lightbox{
 display:none;
@@ -231,7 +175,7 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,.96);
+background:rgba(0,0,0,.95);
 justify-content:center;
 align-items:center;
 z-index:9999;
@@ -243,19 +187,16 @@ max-height:95%;
 border-radius:15px;
 }
 
-/* TOP BUTTON */
+@media(max-width:768px){
 
-#topBtn{
-position:fixed;
-bottom:20px;
-right:20px;
-width:55px;
-height:55px;
-border:none;
-border-radius:50%;
-background:white;
+.hero h1{
+font-size:50px;
+}
+
+.hero p{
 font-size:22px;
-cursor:pointer;
+}
+
 }
 
 </style>
@@ -264,49 +205,35 @@ cursor:pointer;
 <body>
 
 <nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#gallery">Gallery</a>
-<a href="#contact">Contact</a>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 </nav>
 
 <section class="hero" id="home">
-<div class="hero-content">
+<div>
 <h1>Natalia Athlete</h1>
-<p>Official Fitness & Athletic Portfolio</p>
+<p>Official Fitness Portfolio</p>
 </div>
 </section>
 
-<section class="about" id="about">
+<section id="about">
+
+<h2>About</h2>
+
+<div class="about">
 
 <img src="profil.jpg">
 
-<h2>About Me</h2>
-
 <p>
-Welcome to my official athletic portfolio.
-<br><br>
-Since 2010, strength training, fitness and athletic performance have been my passion.
-<br><br>
-This website documents my journey, favorite moments and athletic achievements.
+Welcome to the official portfolio of Natalia Athlete.
+This website presents strength training,
+flexibility, fitness lifestyle,
+professional photography and athletic development.
 </p>
-
-<div class="stats">
-
-<div class="card">
-<h3>15+</h3>
-Years of Training
-</div>
-
-<div class="card">
-<h3>100%</h3>
-Dedication
-</div>
-
-<div class="card">
-<h3>24/7</h3>
-Motivation
-</div>
 
 </div>
 
@@ -318,11 +245,16 @@ Motivation
 
 <div class="category">
 
-<h3>🏆 Competition</h3>
+<h3>💪 Strength</h3>
 
 <div class="gallery">
-<img src="ufc.jpg" onclick="openImage(this.src)">
-<img src="white.jpg" onclick="openImage(this.src)">
+
+<img src="bodyposes.jpg"
+onclick="show(this.src)">
+
+<img src="ufc.jpg"
+onclick="show(this.src)">
+
 </div>
 
 </div>
@@ -332,8 +264,13 @@ Motivation
 <h3>🤸 Flexibility</h3>
 
 <div class="gallery">
-<img src="split_front.jpg" onclick="openImage(this.src)">
-<img src="split_side.jpg" onclick="openImage(this.src)">
+
+<img src="split_front.jpg"
+onclick="show(this.src)">
+
+<img src="split_side.jpg"
+onclick="show(this.src)">
+
 </div>
 
 </div>
@@ -343,20 +280,32 @@ Motivation
 <h3>🌍 Fitness & Lifestyle</h3>
 
 <div class="gallery">
-<img src="canada.jpg" onclick="openImage(this.src)">
-<img src="montreal.jpg" onclick="openImage(this.src)">
-<img src="bodyposes.jpg" onclick="openImage(this.src)">
+
+<img src="canada.jpg"
+onclick="show(this.src)">
+
+<img src="montreal.jpg"
+onclick="show(this.src)">
+
+<img src="white.jpg"
+onclick="show(this.src)">
+
 </div>
 
 </div>
 
 <div class="category">
 
-<h3>📸 Photoshoots</h3>
+<h3>🌊 Lake Constance</h3>
 
 <div class="gallery">
-<img src="bodensee_front.jpg" onclick="openImage(this.src)">
-<img src="bodensee_back.jpg" onclick="openImage(this.src)">
+
+<img src="bodensee_front.jpg"
+onclick="show(this.src)">
+
+<img src="bodensee_back.jpg"
+onclick="show(this.src)">
+
 </div>
 
 </div>
@@ -369,7 +318,7 @@ Motivation
 
 <div class="contact">
 
-<div class="contact-card">
+<div class="box">
 <h3>Email</h3>
 <br>
 <a href="mailto:n.wilke07.07.1990@gmail.com">
@@ -377,25 +326,32 @@ n.wilke07.07.1990@gmail.com
 </a>
 </div>
 
-<div class="contact-card">
+<div class="box">
 <h3>Facebook</h3>
 <br>
-<a href="https://www.facebook.com/share/1X6FkWDyvQ/" target="_blank">
+<a href="https://www.facebook.com/share/1X6FkWDyvQ/">
 Visit Facebook Profile
 </a>
 </div>
 
 </div>
 
-<div class="visitors">
+</section>
 
-<h3>Visitors</h3>
+<section>
+
+<h2>Visitors</h2>
+
+<div class="visitor">
+
+<p>Total Visitors</p>
+
 <br>
 
-<a href="https://www.freecounterstat.com" title="free website counter">
-<img src="https://counter11.optistats.ovh/private/freecounterstat.php?c=yk5cwj5zum9zh27nb7mgjm7hjuqltswp"
-border="0"
-alt="visitor counter">
+<a href="https://www.freecounterstat.com">
+
+<img src="https://counter11.optistats.ovh/private/freecounterstat.php?c=yk5cwj5zum9zh27nb7mgjm7hjuqltswp">
+
 </a>
 
 </div>
@@ -403,27 +359,28 @@ alt="visitor counter">
 </section>
 
 <footer>
-© 2026 Natalia Athlete | Official Portfolio
+
+© 2026 Natalia Athlete
+
 </footer>
 
-<div class="lightbox" id="lightbox" onclick="closeImage()">
-<img id="lightbox-img">
-</div>
+<div class="lightbox"
+id="lightbox"
+onclick="hide()">
 
-<button id="topBtn"
-onclick="window.scrollTo({top:0,behavior:'smooth'})">
-↑
-</button>
+<img id="big">
+
+</div>
 
 <script>
 
-function openImage(src){
-document.getElementById('lightbox').style.display='flex';
-document.getElementById('lightbox-img').src=src;
+function show(src){
+document.getElementById("lightbox").style.display="flex";
+document.getElementById("big").src=src;
 }
 
-function closeImage(){
-document.getElementById('lightbox').style.display='none';
+function hide(){
+document.getElementById("lightbox").style.display="none";
 }
 
 </script>
