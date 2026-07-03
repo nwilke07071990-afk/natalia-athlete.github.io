@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Natalia Athlete</title>
+<title>Natalia Athlete | Official Portfolio</title>
+
+<meta name="description" content="Official athletic portfolio of Natalia Athlete">
 
 <!-- GoatCounter -->
 <script data-goatcounter="https://natalia-athlete.goatcounter.com/count"
@@ -24,39 +25,41 @@ scroll-behavior:smooth;
 }
 
 body{
-font-family:Arial,sans-serif;
+font-family:Arial,Helvetica,sans-serif;
 background:#000;
-color:white;
+color:#fff;
 overflow-x:hidden;
 }
 
-/* Navigation */
+/* NAVIGATION */
 
 nav{
 position:fixed;
 top:0;
 width:100%;
-background:rgba(0,0,0,.9);
-padding:20px;
+background:rgba(0,0,0,.92);
+backdrop-filter:blur(10px);
+padding:18px;
 display:flex;
 justify-content:center;
-gap:30px;
-z-index:1000;
-backdrop-filter:blur(10px);
+gap:35px;
+z-index:999;
+box-shadow:0 0 20px rgba(255,255,255,.1);
 }
 
 nav a{
-color:white;
+color:#fff;
 text-decoration:none;
 font-weight:bold;
+font-size:16px;
 transition:.3s;
 }
 
 nav a:hover{
-color:#888;
+color:#bbb;
 }
 
-/* Hero */
+/* HERO */
 
 .hero{
 height:100vh;
@@ -64,51 +67,60 @@ background:
 linear-gradient(rgba(0,0,0,.45),
 rgba(0,0,0,.75)),
 url('hero.jpg');
-
 background-size:cover;
-background-position:center top;
-
+background-position:center center;
 display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
 }
 
+.hero-content{
+padding:20px;
+}
+
 .hero h1{
-font-size:72px;
+font-size:90px;
+font-weight:800;
+letter-spacing:2px;
 }
 
 .hero p{
 font-size:28px;
 margin-top:20px;
+color:#ddd;
 }
 
-/* Sections */
+.hero button{
+margin-top:40px;
+padding:18px 40px;
+border:none;
+border-radius:40px;
+font-size:20px;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+.hero button:hover{
+transform:scale(1.05);
+}
+
+/* GENERAL */
 
 section{
-padding:100px 20px;
-max-width:1300px;
+padding:100px 25px;
+max-width:1400px;
 margin:auto;
 }
 
 h2{
-font-size:50px;
+font-size:54px;
 text-align:center;
 margin-bottom:50px;
 }
 
-.category{
-margin-top:80px;
-}
-
-.category h3{
-font-size:32px;
-margin-bottom:30px;
-text-align:center;
-color:#ddd;
-}
-
-/* About */
+/* ABOUT */
 
 .about{
 text-align:center;
@@ -120,100 +132,125 @@ height:220px;
 border-radius:50%;
 object-fit:cover;
 border:5px solid white;
-margin-bottom:30px;
+box-shadow:0 0 30px rgba(255,255,255,.2);
 }
 
 .about p{
+margin-top:40px;
 font-size:22px;
 line-height:1.8;
 max-width:900px;
-margin:auto;
+margin-left:auto;
+margin-right:auto;
 }
 
-/* Stats */
+/* ATHLETE CARDS */
 
 .stats{
 display:grid;
 grid-template-columns:
-repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
-margin-top:50px;
+repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:60px;
 }
 
 .card{
 background:#111;
-padding:30px;
+padding:35px;
 border-radius:20px;
 text-align:center;
+transition:.3s;
+box-shadow:0 0 20px rgba(255,255,255,.05);
+}
+
+.card:hover{
+transform:translateY(-5px);
 }
 
 .card h3{
-font-size:36px;
+font-size:38px;
 margin-bottom:10px;
 }
 
-/* Gallery */
+/* GALLERY */
+
+.category{
+margin-top:80px;
+}
+
+.category h3{
+text-align:center;
+font-size:34px;
+margin-bottom:35px;
+}
 
 .gallery{
 display:grid;
 grid-template-columns:
 repeat(auto-fit,minmax(280px,1fr));
-gap:20px;
+gap:25px;
 }
 
 .gallery img{
 width:100%;
-border-radius:15px;
+border-radius:18px;
 cursor:pointer;
 transition:.3s;
-box-shadow:
-0 0 20px rgba(255,255,255,.1);
+box-shadow:0 0 25px rgba(255,255,255,.08);
 }
 
 .gallery img:hover{
 transform:scale(1.03);
 }
 
-/* Contact */
+/* CONTACT */
 
-.contact{
+.contact-box{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+}
+
+.contact-card{
+background:#111;
+padding:30px;
+border-radius:20px;
+width:320px;
 text-align:center;
 }
 
-.contact a{
-display:block;
-margin:20px;
+.contact-card a{
 color:white;
 text-decoration:none;
-font-size:22px;
+font-size:18px;
 }
 
-/* Visitors */
+/* VISITORS */
 
 .visitors{
-text-align:center;
-padding:40px;
 background:#111;
+padding:40px;
 border-radius:20px;
-margin-top:60px;
+text-align:center;
+margin-top:70px;
 }
 
-/* Footer */
+.visitors img{
+margin-top:20px;
+}
+
+/* FOOTER */
 
 footer{
+margin-top:100px;
+padding:60px;
 background:#111;
-padding:50px 20px;
 text-align:center;
-color:#ccc;
-margin-top:80px;
+color:#bbb;
 }
 
-footer h3{
-font-size:28px;
-margin-bottom:20px;
-}
-
-/* Lightbox */
+/* LIGHTBOX */
 
 .lightbox{
 display:none;
@@ -226,180 +263,24 @@ background:rgba(0,0,0,.96);
 justify-content:center;
 align-items:center;
 z-index:9999;
+animation:fade .3s;
 }
 
 .lightbox img{
 max-width:95%;
 max-height:95%;
-border-radius:10px;
+border-radius:15px;
 }
 
-/* Mobile */
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:48px;
+@keyframes fade{
+from{opacity:0}
+to{opacity:1}
 }
 
-.hero p{
-font-size:20px;
-}
+/* TOP BUTTON */
 
-nav{
-gap:15px;
-padding:15px;
-}
-
-nav a{
-font-size:14px;
-}
-
-h2{
-font-size:36px;
-}
-
-.about p{
-font-size:18px;
-}
-
-}
-
-</style>
-</head>
-
-<body>
-
-<nav>
-<a href="#">Home</a>
-<a href="#about">About</a>
-<a href="#gallery">Gallery</a>
-<a href="#contact">Contact</a>
-</nav>
-
-<!-- HERO -->
-
-<section class="hero">
-
-<div>
-
-<h1>Natalia Athlete</h1>
-
-<p>
-Strength • Discipline • Performance
-</p>
-
-</div>
-
-</section>
-
-<!-- ABOUT -->
-
-<section class="about" id="about">
-
-<img src="profil.jpg">
-
-<h2>About Me</h2>
-
-<p>
-
-Welcome to my personal athletic portfolio.
-
-<br><br>
-
-Since 2010, strength training and athletic
-performance have been my passion.
-
-<br><br>
-
-This website documents my fitness journey,
-professional photo shoots and athletic achievements.
-
-</p>
-
-<div class="stats">
-
-<div class="card">
-<h3>2010</h3>
-<p>Training Started</p>
-</div>
-
-<div class="card">
-<h3>15+</h3>
-<p>Years Experience</p>
-</div>
-
-<div class="card">
-<h3>Germany</h3>
-<p>Country</p>
-</div>
-
-<div class="card">
-<h3>Fitness</h3>
-<p>Athlete</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- GALLERY -->
-
-<section id="gallery">
-
-<h2>Gallery</h2>
-
-<div class="category">
-<h3>💪 Strength & Physique</h3>
-
-<div class="gallery">
-
-<img src="bodensee_front.jpg" onclick="openImage(this.src)">
-<img src="bodyposes.jpg" onclick="openImage(this.src)">
-<img src="bodensee_back.jpg" onclick="openImage(this.src)">
-
-</div>
-</div>
-
-<div class="category">
-<h3>🥊 Combat Sports</h3>
-
-<div class="gallery">
-
-<img src="ufc.jpg" onclick="openImage(this.src)">
-
-</div>
-</div>
-
-<div class="category">
-<h3>🤸 Flexibility</h3>
-
-<div class="gallery">
-
-<img src="split_front.jpg" onclick="openImage(this.src)">
-<img src="split_side.jpg" onclick="openImage(this.src)">
-
-</div>
-</div>
-
-<div class="category">
-<h3>🌎 Fitness & Lifestyle</h3>
-
-<div class="gallery">
-
-<img src="canada.jpg" onclick="openImage(this.src)">
-<img src="montreal.jpg" onclick="openImage(this.src)">
-<img src="white.jpg" onclick="openImage(this.src)">
-
-</div>
-</div>
-
-</section>
-
-<!-- CONTACT -->
-
-<section class="contact" id="contact">
-
-<h2>Contact</h2>
-
-<a href="mailto:n.wilke07.07
+#topBtn{
+position:fixed;
+bottom:20px;
+right:20px;
+background:white
