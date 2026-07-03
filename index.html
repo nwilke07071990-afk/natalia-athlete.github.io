@@ -6,8 +6,10 @@
 
 <title>Natalia Athlete | Official Portfolio</title>
 
-<meta name="description" content="Official fitness portfolio of Natalia Athlete">
+<meta name="description"
+content="Official fitness portfolio of Natalia Athlete">
 
+<!-- GoatCounter -->
 <script data-goatcounter="https://natalia-athlete.goatcounter.com/count"
 async src="//gc.zgo.at/count.js"></script>
 
@@ -19,21 +21,25 @@ padding:0;
 box-sizing:border-box;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 background:#000;
 color:white;
 font-family:Arial,Helvetica,sans-serif;
+overflow-x:hidden;
 }
 
-html{
-scroll-behavior:smooth;
-}
+/* NAVIGATION */
 
 nav{
 position:fixed;
 top:0;
 width:100%;
-background:#000;
+background:rgba(0,0,0,.9);
+backdrop-filter:blur(10px);
 padding:20px;
 z-index:1000;
 }
@@ -41,21 +47,29 @@ z-index:1000;
 nav ul{
 display:flex;
 justify-content:center;
-gap:30px;
+gap:35px;
 list-style:none;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-font-size:18px;
 font-weight:bold;
+font-size:18px;
+transition:.3s;
 }
+
+nav a:hover{
+opacity:.7;
+}
+
+/* HERO */
 
 .hero{
 height:100vh;
 background:
-linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.8)),
+linear-gradient(rgba(0,0,0,.4),
+rgba(0,0,0,.8)),
 url('hero.jpg');
 background-size:cover;
 background-position:center;
@@ -65,26 +79,32 @@ align-items:center;
 text-align:center;
 }
 
-.hero h1{
-font-size:70px;
+.hero-content h1{
+font-size:clamp(50px,10vw,100px);
+font-weight:900;
 }
 
-.hero p{
-font-size:28px;
+.hero-content p{
+font-size:clamp(20px,3vw,30px);
 margin-top:20px;
+color:#ddd;
 }
+
+/* GENERAL */
 
 section{
-padding:80px 20px;
 max-width:1400px;
 margin:auto;
+padding:100px 20px;
 }
 
 h2{
+font-size:clamp(36px,5vw,60px);
 text-align:center;
-font-size:42px;
-margin-bottom:40px;
+margin-bottom:50px;
 }
+
+/* ABOUT */
 
 .about{
 text-align:center;
@@ -95,33 +115,42 @@ width:220px;
 height:220px;
 object-fit:cover;
 border-radius:50%;
-border:4px solid white;
+border:5px solid white;
+box-shadow:0 0 30px rgba(255,255,255,.2);
 }
 
 .about p{
 max-width:900px;
-margin:30px auto;
+margin:40px auto;
 font-size:20px;
 line-height:1.8;
+color:#ddd;
 }
 
-.gallery{
+/* STATS */
+
+.stats{
 display:grid;
 grid-template-columns:
-repeat(auto-fit,minmax(300px,1fr));
+repeat(auto-fit,minmax(220px,1fr));
 gap:25px;
+margin-top:60px;
 }
 
-.gallery img{
-width:100%;
+.card{
+background:#111;
+padding:35px;
 border-radius:20px;
-cursor:pointer;
-transition:.3s;
+text-align:center;
+box-shadow:0 0 20px rgba(255,255,255,.05);
 }
 
-.gallery img:hover{
-transform:scale(1.03);
+.card h3{
+font-size:40px;
+margin-bottom:10px;
 }
+
+/* CATEGORY */
 
 .category{
 margin-top:80px;
@@ -133,40 +162,70 @@ font-size:32px;
 margin-bottom:30px;
 }
 
-.contact{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:20px;
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
 }
 
-.box{
+.gallery img{
+width:100%;
+border-radius:20px;
+cursor:pointer;
+transition:.3s;
+box-shadow:0 0 20px rgba(255,255,255,.08);
+}
+
+.gallery img:hover{
+transform:scale(1.03);
+}
+
+/* CONTACT */
+
+.contact{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+}
+
+.contact-box{
 background:#111;
 padding:30px;
 border-radius:20px;
-width:300px;
+width:320px;
 text-align:center;
 }
 
-.box a{
+.contact-box a{
 color:white;
 text-decoration:none;
 }
 
-.visitor{
+/* VISITORS */
+
+.visitors{
 background:#111;
 padding:40px;
 border-radius:20px;
 text-align:center;
+margin-top:60px;
 }
 
+/* FOOTER */
+
 footer{
+margin-top:100px;
+padding:50px;
 background:#111;
-padding:40px;
 text-align:center;
-margin-top:80px;
 color:#aaa;
 }
+
+/* LIGHTBOX */
 
 .lightbox{
 display:none;
@@ -175,7 +234,7 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,.95);
+background:rgba(0,0,0,.96);
 justify-content:center;
 align-items:center;
 z-index:9999;
@@ -187,13 +246,33 @@ max-height:95%;
 border-radius:15px;
 }
 
-@media(max-width:768px){
+/* TOP BUTTON */
 
-.hero h1{
-font-size:50px;
+#topBtn{
+position:fixed;
+bottom:20px;
+right:20px;
+width:55px;
+height:55px;
+border:none;
+border-radius:50%;
+background:white;
+font-size:22px;
+cursor:pointer;
 }
 
-.hero p{
+@media(max-width:768px){
+
+nav ul{
+gap:15px;
+flex-wrap:wrap;
+}
+
+.hero-content h1{
+font-size:48px;
+}
+
+.hero-content p{
 font-size:22px;
 }
 
@@ -214,26 +293,47 @@ font-size:22px;
 </nav>
 
 <section class="hero" id="home">
-<div>
+<div class="hero-content">
 <h1>Natalia Athlete</h1>
-<p>Official Fitness Portfolio</p>
+<p>Strength • Flexibility • Lifestyle</p>
 </div>
 </section>
 
 <section id="about">
 
-<h2>About</h2>
+<h2>About Me</h2>
 
 <div class="about">
 
 <img src="profil.jpg">
 
 <p>
-Welcome to the official portfolio of Natalia Athlete.
-This website presents strength training,
-flexibility, fitness lifestyle,
-professional photography and athletic development.
+Welcome to my official athletic portfolio.
+Since 2010, fitness, strength training,
+flexibility and athletic performance
+have been my passion.
+This website documents my personal journey,
+professional photoshoots and favorite moments.
 </p>
+
+</div>
+
+<div class="stats">
+
+<div class="card">
+<h3>15+</h3>
+Years Training
+</div>
+
+<div class="card">
+<h3>100%</h3>
+Dedication
+</div>
+
+<div class="card">
+<h3>24/7</h3>
+Motivation
+</div>
 
 </div>
 
@@ -248,13 +348,8 @@ professional photography and athletic development.
 <h3>💪 Strength</h3>
 
 <div class="gallery">
-
-<img src="bodyposes.jpg"
-onclick="show(this.src)">
-
-<img src="ufc.jpg"
-onclick="show(this.src)">
-
+<img src="bodyposes.jpg" onclick="openImage(this.src)">
+<img src="ufc.jpg" onclick="openImage(this.src)">
 </div>
 
 </div>
@@ -264,13 +359,8 @@ onclick="show(this.src)">
 <h3>🤸 Flexibility</h3>
 
 <div class="gallery">
-
-<img src="split_front.jpg"
-onclick="show(this.src)">
-
-<img src="split_side.jpg"
-onclick="show(this.src)">
-
+<img src="split_front.jpg" onclick="openImage(this.src)">
+<img src="split_side.jpg" onclick="openImage(this.src)">
 </div>
 
 </div>
@@ -280,16 +370,9 @@ onclick="show(this.src)">
 <h3>🌍 Fitness & Lifestyle</h3>
 
 <div class="gallery">
-
-<img src="canada.jpg"
-onclick="show(this.src)">
-
-<img src="montreal.jpg"
-onclick="show(this.src)">
-
-<img src="white.jpg"
-onclick="show(this.src)">
-
+<img src="canada.jpg" onclick="openImage(this.src)">
+<img src="montreal.jpg" onclick="openImage(this.src)">
+<img src="white.jpg" onclick="openImage(this.src)">
 </div>
 
 </div>
@@ -299,13 +382,8 @@ onclick="show(this.src)">
 <h3>🌊 Lake Constance</h3>
 
 <div class="gallery">
-
-<img src="bodensee_front.jpg"
-onclick="show(this.src)">
-
-<img src="bodensee_back.jpg"
-onclick="show(this.src)">
-
+<img src="bodensee_front.jpg" onclick="openImage(this.src)">
+<img src="bodensee_back.jpg" onclick="openImage(this.src)">
 </div>
 
 </div>
@@ -318,7 +396,7 @@ onclick="show(this.src)">
 
 <div class="contact">
 
-<div class="box">
+<div class="contact-box">
 <h3>Email</h3>
 <br>
 <a href="mailto:n.wilke07.07.1990@gmail.com">
@@ -326,33 +404,32 @@ n.wilke07.07.1990@gmail.com
 </a>
 </div>
 
-<div class="box">
+<div class="contact-box">
 <h3>Facebook</h3>
 <br>
-<a href="https://www.facebook.com/share/1X6FkWDyvQ/">
+<a href="https://www.facebook.com/share/1X6FkWDyvQ/"
+target="_blank">
 Visit Facebook Profile
 </a>
 </div>
 
 </div>
 
-</section>
+<div class="visitors">
 
-<section>
-
-<h2>Visitors</h2>
-
-<div class="visitor">
-
-<p>Total Visitors</p>
+<h3>Visitors</h3>
 
 <br>
 
 <a href="https://www.freecounterstat.com">
-
 <img src="https://counter11.optistats.ovh/private/freecounterstat.php?c=yk5cwj5zum9zh27nb7mgjm7hjuqltswp">
-
 </a>
+
+<br><br>
+
+<p>
+Analytics powered by GoatCounter
+</p>
 
 </div>
 
@@ -360,26 +437,41 @@ Visit Facebook Profile
 
 <footer>
 
+<h2>Natalia Athlete</h2>
+
+<p>
+Official Fitness Portfolio
+</p>
+
+<br>
+
+<p>
 © 2026 Natalia Athlete
+</p>
 
 </footer>
 
 <div class="lightbox"
 id="lightbox"
-onclick="hide()">
+onclick="closeImage()">
 
-<img id="big">
+<img id="lightbox-img">
 
 </div>
 
+<button id="topBtn"
+onclick="window.scrollTo({top:0,behavior:'smooth'})">
+↑
+</button>
+
 <script>
 
-function show(src){
+function openImage(src){
 document.getElementById("lightbox").style.display="flex";
-document.getElementById("big").src=src;
+document.getElementById("lightbox-img").src=src;
 }
 
-function hide(){
+function closeImage(){
 document.getElementById("lightbox").style.display="none";
 }
 
