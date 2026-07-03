@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
 
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Natalia Athlete</title>
 
+<!-- GoatCounter -->
 <script data-goatcounter="https://natalia-athlete.goatcounter.com/count"
 async src="//gc.zgo.at/count.js"></script>
 
@@ -35,8 +36,8 @@ nav{
 position:fixed;
 top:0;
 width:100%;
+background:rgba(0,0,0,.9);
 padding:20px;
-background:rgba(0,0,0,0.9);
 display:flex;
 justify-content:center;
 gap:30px;
@@ -52,7 +53,7 @@ transition:.3s;
 }
 
 nav a:hover{
-color:#999;
+color:#888;
 }
 
 /* Hero */
@@ -61,7 +62,7 @@ color:#999;
 height:100vh;
 background:
 linear-gradient(rgba(0,0,0,.45),
-rgba(0,0,0,.70)),
+rgba(0,0,0,.75)),
 url('hero.jpg');
 
 background-size:cover;
@@ -94,6 +95,17 @@ h2{
 font-size:50px;
 text-align:center;
 margin-bottom:50px;
+}
+
+.category{
+margin-top:80px;
+}
+
+.category h3{
+font-size:32px;
+margin-bottom:30px;
+text-align:center;
+color:#ddd;
 }
 
 /* About */
@@ -176,6 +188,16 @@ text-decoration:none;
 font-size:22px;
 }
 
+/* Visitors */
+
+.visitors{
+text-align:center;
+padding:40px;
+background:#111;
+border-radius:20px;
+margin-top:60px;
+}
+
 /* Footer */
 
 footer{
@@ -200,7 +222,7 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,.95);
+background:rgba(0,0,0,.96);
 justify-content:center;
 align-items:center;
 z-index:9999;
@@ -226,6 +248,11 @@ font-size:20px;
 
 nav{
 gap:15px;
+padding:15px;
+}
+
+nav a{
+font-size:14px;
 }
 
 h2{
@@ -250,17 +277,23 @@ font-size:18px;
 <a href="#contact">Contact</a>
 </nav>
 
+<!-- HERO -->
+
 <section class="hero">
 
 <div>
+
 <h1>Natalia Athlete</h1>
 
 <p>
 Strength • Discipline • Performance
 </p>
+
 </div>
 
 </section>
+
+<!-- ABOUT -->
 
 <section class="about" id="about">
 
@@ -269,25 +302,31 @@ Strength • Discipline • Performance
 <h2>About Me</h2>
 
 <p>
+
 Welcome to my personal athletic portfolio.
+
 <br><br>
+
 Since 2010, strength training and athletic
 performance have been my passion.
+
 <br><br>
+
 This website documents my fitness journey,
 professional photo shoots and athletic achievements.
+
 </p>
 
 <div class="stats">
 
 <div class="card">
-<h3>10+</h3>
-<p>Years Training</p>
+<h3>2010</h3>
+<p>Training Started</p>
 </div>
 
 <div class="card">
-<h3>Strength</h3>
-<p>Speciality</p>
+<h3>15+</h3>
+<p>Years Experience</p>
 </div>
 
 <div class="card">
@@ -304,96 +343,63 @@ professional photo shoots and athletic achievements.
 
 </section>
 
+<!-- GALLERY -->
+
 <section id="gallery">
 
 <h2>Gallery</h2>
 
+<div class="category">
+<h3>💪 Strength & Physique</h3>
+
 <div class="gallery">
 
 <img src="bodensee_front.jpg" onclick="openImage(this.src)">
-<img src="ufc.jpg" onclick="openImage(this.src)">
-<img src="split_front.jpg" onclick="openImage(this.src)">
-<img src="split_side.jpg" onclick="openImage(this.src)">
-<img src="canada.jpg" onclick="openImage(this.src)">
-<img src="montreal.jpg" onclick="openImage(this.src)">
-<img src="white.jpg" onclick="openImage(this.src)">
 <img src="bodyposes.jpg" onclick="openImage(this.src)">
 <img src="bodensee_back.jpg" onclick="openImage(this.src)">
 
 </div>
+</div>
+
+<div class="category">
+<h3>🥊 Combat Sports</h3>
+
+<div class="gallery">
+
+<img src="ufc.jpg" onclick="openImage(this.src)">
+
+</div>
+</div>
+
+<div class="category">
+<h3>🤸 Flexibility</h3>
+
+<div class="gallery">
+
+<img src="split_front.jpg" onclick="openImage(this.src)">
+<img src="split_side.jpg" onclick="openImage(this.src)">
+
+</div>
+</div>
+
+<div class="category">
+<h3>🌎 Fitness & Lifestyle</h3>
+
+<div class="gallery">
+
+<img src="canada.jpg" onclick="openImage(this.src)">
+<img src="montreal.jpg" onclick="openImage(this.src)">
+<img src="white.jpg" onclick="openImage(this.src)">
+
+</div>
+</div>
 
 </section>
+
+<!-- CONTACT -->
 
 <section class="contact" id="contact">
 
 <h2>Contact</h2>
 
-<a href="mailto:n.wilke07.07.1990@gmail.com">
-📧 n.wilke07.07.1990@gmail.com
-</a>
-
-<a href="https://www.facebook.com/share/1DN7PmTFJo/"
-target="_blank">
-📘 Facebook Profile
-</a>
-
-</section>
-
-<div class="lightbox"
-id="lightbox"
-onclick="closeImage()">
-
-<img id="lightbox-img">
-
-</div>
-
-<footer>
-
-<h3>Natalia Athlete</h3>
-
-Strength • Discipline • Performance
-
-<br><br>
-
-📊 Website analytics powered by GoatCounter
-
-<br>
-
-👥 Visitor statistics are collected anonymously
-
-<br><br>
-
-<a href="mailto:n.wilke07.07.1990@gmail.com"
-style="color:white;text-decoration:none;">
-📧 Contact
-</a>
-
-<br><br>
-
-<a href="https://www.facebook.com/share/1DN7PmTFJo/"
-target="_blank"
-style="color:white;text-decoration:none;">
-📘 Facebook
-</a>
-
-<br><br>
-
-© 2026 Natalia Athlete
-
-</footer>
-
-<script>
-
-function openImage(src){
-document.getElementById("lightbox").style.display="flex";
-document.getElementById("lightbox-img").src=src;
-}
-
-function closeImage(){
-document.getElementById("lightbox").style.display="none";
-}
-
-</script>
-
-</body>
-</html>
+<a href="mailto:n.wilke07.07
