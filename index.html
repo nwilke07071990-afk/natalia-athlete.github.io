@@ -12,11 +12,14 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
+}
+
+html{
     scroll-behavior:smooth;
 }
 
 body{
-    font-family:Arial, sans-serif;
+    font-family:Arial,sans-serif;
     background:#000;
     color:white;
 }
@@ -25,18 +28,19 @@ body{
 
 nav{
     position:fixed;
-    top:0;
     width:100%;
+    top:0;
     background:rgba(0,0,0,0.8);
     backdrop-filter:blur(10px);
     z-index:1000;
-    padding:20px;
+    padding:18px;
 }
 
 nav ul{
     display:flex;
     justify-content:center;
-    gap:30px;
+    flex-wrap:wrap;
+    gap:25px;
     list-style:none;
 }
 
@@ -44,17 +48,21 @@ nav a{
     color:white;
     text-decoration:none;
     font-weight:bold;
-    font-size:1rem;
+    transition:.3s;
 }
 
-/* Hero */
+nav a:hover{
+    color:#8ec5ff;
+}
+
+/* HERO */
 
 .hero{
-    height:100vh;
+    min-height:100vh;
     background:
     linear-gradient(rgba(0,0,0,.45),
-                    rgba(0,0,0,.65)),
-    url('hero.jpg');
+                    rgba(0,0,0,.70)),
+    url("hero.jpg");
 
     background-size:cover;
     background-position:center;
@@ -74,56 +82,56 @@ nav a{
 }
 
 .hero p{
-    font-size:2rem;
-    margin-bottom:40px;
+    font-size:1.5rem;
+    max-width:700px;
 }
 
 .button{
+    margin-top:40px;
+    padding:18px 40px;
     background:white;
     color:black;
-    padding:18px 45px;
-    border-radius:50px;
     text-decoration:none;
+    border-radius:40px;
     font-weight:bold;
-    font-size:1.2rem;
-    transition:0.3s;
+    transition:.3s;
 }
 
 .button:hover{
     transform:scale(1.05);
 }
 
-/* About */
+/* ABOUT */
 
 .about{
-    padding:100px 25px;
+    background:#111;
+    padding:100px 20px;
     text-align:center;
-    background:#050505;
 }
 
 .profile{
-    width:220px;
-    height:220px;
-    object-fit:cover;
+    width:200px;
+    height:200px;
     border-radius:50%;
-    border:6px solid white;
+    object-fit:cover;
+    border:5px solid white;
     margin-bottom:40px;
 }
 
 .about h2{
-    font-size:4rem;
-    margin-bottom:40px;
+    font-size:3rem;
+    margin-bottom:30px;
 }
 
 .about p{
     max-width:900px;
     margin:auto;
-    font-size:1.4rem;
-    line-height:2;
-    color:#dddddd;
+    line-height:1.8;
+    color:#ddd;
+    font-size:1.2rem;
 }
 
-/* Gallery */
+/* GALLERY */
 
 .gallery{
     padding:100px 20px;
@@ -131,69 +139,109 @@ nav a{
 
 .gallery h2{
     text-align:center;
-    font-size:4rem;
-    margin-bottom:60px;
+    font-size:3rem;
+    margin-bottom:50px;
 }
 
-.grid{
+.gallery-grid{
     display:grid;
     grid-template-columns:
     repeat(auto-fit,minmax(280px,1fr));
     gap:25px;
 }
 
-.grid img{
+.gallery-grid img{
     width:100%;
-    border-radius:25px;
-    transition:0.3s;
+    border-radius:20px;
     box-shadow:
-    0 0 20px rgba(255,255,255,0.1);
+    0 0 20px rgba(255,255,255,.15);
+    transition:.3s;
 }
 
-.grid img:hover{
+.gallery-grid img:hover{
     transform:scale(1.03);
 }
 
-/* Stats */
+/* JOURNEY */
 
-.stats{
-    background:#080808;
+.journey{
+    background:#111;
     padding:100px 20px;
-}
-
-.stats h2{
     text-align:center;
-    font-size:4rem;
-    margin-bottom:60px;
 }
 
-.stats-grid{
+.journey h2{
+    font-size:3rem;
+    margin-bottom:50px;
+}
+
+.timeline{
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
-    gap:50px;
+    gap:40px;
 }
 
-.stat{
+.timeline div{
+    background:#222;
+    padding:25px;
+    border-radius:15px;
+    width:200px;
+}
+
+/* CONTACT */
+
+.contact{
+    padding:100px 20px;
     text-align:center;
 }
 
-.stat h3{
+.contact h2{
     font-size:3rem;
+    margin-bottom:30px;
 }
 
-.stat p{
-    color:#aaa;
-    margin-top:10px;
+.contact a{
+    color:#8ec5ff;
+    text-decoration:none;
+    display:block;
+    margin:15px;
+    font-size:1.2rem;
 }
 
-/* Footer */
+/* FOOTER */
 
 footer{
     background:#111;
     text-align:center;
     padding:40px;
     color:#888;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+.hero h1{
+    font-size:2.7rem;
+}
+
+.hero p{
+    font-size:1rem;
+}
+
+.about h2,
+.gallery h2,
+.journey h2,
+.contact h2{
+    font-size:2rem;
+}
+
+.profile{
+    width:140px;
+    height:140px;
+}
+
 }
 
 </style>
@@ -206,7 +254,8 @@ footer{
 <li><a href="#">Home</a></li>
 <li><a href="#about">About</a></li>
 <li><a href="#gallery">Gallery</a></li>
-<li><a href="#stats">Journey</a></li>
+<li><a href="#journey">Journey</a></li>
+<li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
 
@@ -232,23 +281,11 @@ Explore My Journey
 
 <p>
 Welcome to my personal fitness journey.
-</p>
-
-<br><br>
-
-<p>
-Since 2010, strength training and athletic
-performance have been my passion,
-motivation and lifestyle.
-</p>
-
-<br><br>
-
-<p>
-This website documents my journey,
-favorite moments and athletic achievements
-through dedication, discipline and
-continuous self-improvement.
+Since 2010, strength training, athletic performance,
+discipline and continuous self-improvement
+have been an important part of my life.
+This website documents my personal journey,
+favorite moments and athletic achievements.
 </p>
 
 </section>
@@ -257,51 +294,68 @@ continuous self-improvement.
 
 <h2>Gallery</h2>
 
-<div class="grid">
+<div class="gallery-grid">
 
 <img src="bodensee_front.jpg">
-
 <img src="bodensee_back.jpg">
-
 <img src="bodyposes.jpg">
-
 <img src="canada.jpg">
-
 <img src="montreal.jpg">
-
 <img src="white.jpg">
 
 </div>
 
 </section>
 
-<section class="stats" id="stats">
+<section class="journey" id="journey">
 
 <h2>Athletic Journey</h2>
 
-<div class="stats-grid">
+<div class="timeline">
 
-<div class="stat">
+<div>
 <h3>2010</h3>
-<p>Journey Started</p>
+<p>Started strength training</p>
 </div>
 
-<div class="stat">
-<h3>15+</h3>
-<p>Years Training</p>
+<div>
+<h3>2015</h3>
+<p>Advanced athletic development</p>
 </div>
 
-<div class="stat">
-<h3>100%</h3>
-<p>Dedication</p>
+<div>
+<h3>2020</h3>
+<p>Continuous improvement</p>
+</div>
+
+<div>
+<h3>2026</h3>
+<p>Professional athlete portfolio</p>
 </div>
 
 </div>
 
 </section>
 
+<section class="contact" id="contact">
+
+<h2>Contact</h2>
+
+<a href="mailto:n.wilke07.07.1990@gmail.com">
+📧 n.wilke07.07.1990@gmail.com
+</a>
+
+<a href="https://www.facebook.com/share/1DN7PmTFJo/" target="_blank">
+📘 Facebook Profile
+</a>
+
+</section>
+
 <footer>
-© 2026 Natalia Athlete
+
+© 2026 Natalia Athlete<br>
+Strength • Discipline • Performance
+
 </footer>
 
 </body>
