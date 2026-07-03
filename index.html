@@ -29,41 +29,40 @@ nav{
     width:100%;
     background:rgba(0,0,0,0.95);
     padding:20px;
-    z-index:1000;
     display:flex;
     justify-content:center;
     gap:30px;
+    z-index:1000;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    font-size:18px;
     font-weight:bold;
+    font-size:18px;
 }
 
 .hero{
     height:100vh;
     background:
-        linear-gradient(rgba(0,0,0,.45),
-        rgba(0,0,0,.65)),
+        linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.65)),
         url('hero.jpg');
     background-size:cover;
     background-position:center;
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
     text-align:center;
     padding:20px;
 }
 
 .hero h1{
-    font-size:70px;
+    font-size:72px;
 }
 
 .hero p{
-    font-size:24px;
-    margin-top:20px;
+    font-size:26px;
+    margin:20px 0;
 }
 
 .button{
@@ -72,10 +71,9 @@ nav a{
     color:black;
     padding:20px 50px;
     border-radius:50px;
-    margin-top:30px;
     text-decoration:none;
-    font-weight:bold;
     font-size:22px;
+    font-weight:bold;
 }
 
 section{
@@ -99,7 +97,7 @@ h2{
     height:220px;
     border-radius:50%;
     object-fit:cover;
-    border:6px solid white;
+    border:5px solid white;
     margin-bottom:30px;
 }
 
@@ -117,6 +115,12 @@ h2{
 .gallery img{
     width:100%;
     border-radius:20px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.02);
 }
 
 .contact{
@@ -125,17 +129,47 @@ h2{
 
 .contact a{
     color:white;
+    text-decoration:none;
     display:block;
     margin:20px;
     font-size:24px;
-    text-decoration:none;
 }
 
 footer{
+    background:#111;
     text-align:center;
     padding:50px;
-    background:#111;
     color:#999;
+}
+
+/* Lightbox */
+
+.lightbox{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.95);
+    z-index:9999;
+    justify-content:center;
+    align-items:center;
+}
+
+.lightbox img{
+    max-width:95%;
+    max-height:95%;
+    border-radius:10px;
+}
+
+.close{
+    position:absolute;
+    top:20px;
+    right:30px;
+    color:white;
+    font-size:50px;
+    cursor:pointer;
 }
 
 @media(max-width:700px){
@@ -153,11 +187,11 @@ nav{
 }
 
 nav a{
-    font-size:16px;
+    font-size:15px;
 }
 
 h2{
-    font-size:38px;
+    font-size:36px;
 }
 }
 </style>
@@ -166,26 +200,20 @@ h2{
 <body>
 
 <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
 </nav>
 
 <section class="hero" id="home">
-
 <div>
-    <h1>Natalia Athlete</h1>
-
-    <p>
-        Strength • Discipline • Performance
-    </p>
-
-    <a class="button" href="#gallery">
-        Explore My Journey
-    </a>
+<h1>Natalia Athlete</h1>
+<p>Strength • Discipline • Performance</p>
+<a class="button" href="#gallery">
+Explore My Journey
+</a>
 </div>
-
 </section>
 
 <section class="about" id="about">
@@ -198,7 +226,7 @@ h2{
 Welcome to my personal fitness journey.
 <br><br>
 Since 2010, strength training and athletic
-performance have been my passion and motivation.
+performance have been my passion.
 <br><br>
 This website documents my journey,
 favorite moments and athletic achievements.
@@ -212,23 +240,15 @@ favorite moments and athletic achievements.
 
 <div class="gallery">
 
-<img src="bodensee_front.jpg">
-
-<img src="ufc.jpg">
-
-<img src="split_front.jpg">
-
-<img src="split_side.jpg">
-
-<img src="canada.jpg">
-
-<img src="montreal.jpg">
-
-<img src="white.jpg">
-
-<img src="bodyposes.jpg">
-
-<img src="bodensee_back.jpg">
+<img src="bodensee_front.jpg" onclick="openImage(this.src)">
+<img src="ufc.jpg" onclick="openImage(this.src)">
+<img src="split_front.jpg" onclick="openImage(this.src)">
+<img src="split_side.jpg" onclick="openImage(this.src)">
+<img src="canada.jpg" onclick="openImage(this.src)">
+<img src="montreal.jpg" onclick="openImage(this.src)">
+<img src="white.jpg" onclick="openImage(this.src)">
+<img src="bodyposes.jpg" onclick="openImage(this.src)">
+<img src="bodensee_back.jpg" onclick="openImage(this.src)">
 
 </div>
 
@@ -249,12 +269,29 @@ favorite moments and athletic achievements.
 </section>
 
 <footer>
-
 © 2026 Natalia Athlete
 <br><br>
 Strength • Discipline • Performance
-
 </footer>
+
+<div class="lightbox" id="lightbox" onclick="closeImage()">
+
+<span class="close">&times;</span>
+
+<img id="lightbox-img">
+
+</div>
+
+<script>
+function openImage(src){
+    document.getElementById("lightbox").style.display="flex";
+    document.getElementById("lightbox-img").src=src;
+}
+
+function closeImage(){
+    document.getElementById("lightbox").style.display="none";
+}
+</script>
 
 </body>
 </html>
