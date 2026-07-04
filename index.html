@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
@@ -9,7 +8,7 @@
 <title>Natalia Athlete | Official Strength & Fitness Portfolio</title>
 
 <meta name="description"
-content="Official portfolio of Natalia, strength and fitness athlete from Canada.">
+content="Official strength and fitness portfolio of Natalia Athlete">
 
 <style>
 
@@ -24,9 +23,9 @@ scroll-behavior:smooth;
 }
 
 body{
-font-family:Arial,Helvetica,sans-serif;
 background:#000;
 color:#fff;
+font-family:Arial,Helvetica,sans-serif;
 overflow-x:hidden;
 }
 
@@ -37,13 +36,12 @@ position:fixed;
 top:0;
 width:100%;
 background:rgba(0,0,0,.95);
+backdrop-filter:blur(10px);
 padding:20px;
 display:flex;
 justify-content:center;
 gap:35px;
 z-index:1000;
-backdrop-filter:blur(10px);
-box-shadow:0 0 20px rgba(255,255,255,.1);
 }
 
 nav a{
@@ -51,7 +49,6 @@ color:white;
 text-decoration:none;
 font-weight:bold;
 font-size:17px;
-transition:.3s;
 }
 
 nav a:hover{
@@ -127,13 +124,10 @@ color:#ddd;
 
 /* STATS */
 
-.stats-group{
-margin-top:60px;
-}
-
-.stats-group h3{
+.stats-title{
 text-align:center;
 font-size:32px;
+margin-top:60px;
 margin-bottom:30px;
 }
 
@@ -149,7 +143,6 @@ background:#111;
 padding:30px;
 border-radius:20px;
 text-align:center;
-box-shadow:0 0 20px rgba(255,255,255,.05);
 transition:.3s;
 }
 
@@ -157,13 +150,14 @@ transition:.3s;
 transform:translateY(-5px);
 }
 
-.card h4{
+.card h3{
 font-size:32px;
 margin-bottom:10px;
 }
 
 .card p{
 color:#ccc;
+line-height:1.5;
 }
 
 /* GALLERY */
@@ -222,10 +216,10 @@ text-decoration:none;
 
 .visitors{
 background:#111;
-padding:30px;
+padding:40px;
 border-radius:20px;
 text-align:center;
-margin-top:50px;
+margin-top:60px;
 }
 
 /* FOOTER */
@@ -234,7 +228,7 @@ footer{
 background:#111;
 padding:60px;
 text-align:center;
-margin-top:80px;
+margin-top:100px;
 color:#999;
 }
 
@@ -322,102 +316,96 @@ Hello and welcome to my website!
 <br>
 
 <p>
-My name is Natalia, and I am a strength and fitness athlete from Canada.
-I am 155 cm (5'1") tall and have dedicated many years of my life to building strength, athletic performance, and a physique that reflects my passion for training.
+My name is Natalia, and I am a strength and fitness athlete from Canada. I am 155 cm (5'1") tall and have dedicated many years of my life to building strength, athletic performance, and a physique that reflects my passion for training.
 </p>
 
 <br>
 
 <p>
-Fitness is more than a hobby for me — it is a lifestyle.
-Through years of consistent training, discipline, and dedication, I have developed a physique that combines muscularity, strength, athleticism, and mobility.
+Fitness is more than a hobby — it is a lifestyle. Through years of consistent training, discipline, and dedication, I have developed a physique that combines muscularity, strength, athleticism, and mobility.
 </p>
 
 </div>
 
-<div class="stats-group">
-
-<h3>Physical Stats</h3>
+<div class="stats-title">
+Physical Stats
+</div>
 
 <div class="stats">
 
 <div class="card">
-<h4>155 cm</h4>
+<h3>155 cm</h3>
 <p>5'1"</p>
 <p>Height</p>
 </div>
 
 <div class="card">
-<h4>75 kg</h4>
+<h3>75 kg</h3>
 <p>165 lbs</p>
 <p>Body Weight</p>
 </div>
 
 </div>
 
+<div class="stats-title">
+Body Measurements
 </div>
-
-<div class="stats-group">
-
-<h3>Body Measurements</h3>
 
 <div class="stats">
 
 <div class="card">
-<h4>120 cm</h4>
+<h3>120 cm</h3>
 <p>47.2"</p>
 <p>Shoulders</p>
 </div>
 
 <div class="card">
-<h4>101 cm</h4>
+<h3>101 cm</h3>
 <p>39.8"</p>
 <p>Chest</p>
 </div>
 
 <div class="card">
-<h4>68 cm</h4>
+<h3>68 cm</h3>
 <p>26.8"</p>
 <p>Waist</p>
 </div>
 
 </div>
 
+<div class="stats-title">
+Muscle Measurements
 </div>
-
-<div class="stats-group">
-
-<h3>Muscle Measurements</h3>
 
 <div class="stats">
 
 <div class="card">
-<h4>41 cm</h4>
+<h3>41 cm</h3>
 <p>16.1"</p>
 <p>Upper Arm</p>
 </div>
 
 <div class="card">
-<h4>32 cm</h4>
+<h3>32 cm</h3>
 <p>12.6"</p>
 <p>Forearm</p>
 </div>
 
 <div class="card">
-<h4>72 cm</h4>
+<h3>72 cm</h3>
 <p>28.3"</p>
 <p>Thigh</p>
 </div>
 
 <div class="card">
-<h4>42 cm</h4>
+<h3>42 cm</h3>
 <p>16.5"</p>
 <p>Calf</p>
 </div>
 
 </div>
 
-</div>
+</section>
 
 <section id="gallery">
 
@@ -428,10 +416,8 @@ Through years of consistent training, discipline, and dedication, I have develop
 <h3>💪 Strength</h3>
 
 <div class="gallery">
-
-<img src="bodyposes.jpg" onclick="openImg(this.src)">
-<img src="ufc.jpg" onclick="openImg(this.src)">
-
+<img src="bodyposes.jpg" onclick="show(this.src)">
+<img src="ufc.jpg" onclick="show(this.src)">
 </div>
 
 </div>
@@ -441,10 +427,8 @@ Through years of consistent training, discipline, and dedication, I have develop
 <h3>🤸 Flexibility</h3>
 
 <div class="gallery">
-
-<img src="split_front.jpg" onclick="openImg(this.src)">
-<img src="split_side.jpg" onclick="openImg(this.src)">
-
+<img src="split_front.jpg" onclick="show(this.src)">
+<img src="split_side.jpg" onclick="show(this.src)">
 </div>
 
 </div>
@@ -454,11 +438,9 @@ Through years of consistent training, discipline, and dedication, I have develop
 <h3>🌎 Lifestyle</h3>
 
 <div class="gallery">
-
-<img src="canada.jpg" onclick="openImg(this.src)">
-<img src="montreal.jpg" onclick="openImg(this.src)">
-<img src="white.jpg" onclick="openImg(this.src)">
-
+<img src="canada.jpg" onclick="show(this.src)">
+<img src="montreal.jpg" onclick="show(this.src)">
+<img src="white.jpg" onclick="show(this.src)">
 </div>
 
 </div>
@@ -468,10 +450,8 @@ Through years of consistent training, discipline, and dedication, I have develop
 <h3>🌊 Lake Constance</h3>
 
 <div class="gallery">
-
-<img src="bodensee_front.jpg" onclick="openImg(this.src)">
-<img src="bodensee_back.jpg" onclick="openImg(this.src)">
-
+<img src="bodensee_front.jpg" onclick="show(this.src)">
+<img src="bodensee_back.jpg" onclick="show(this.src)">
 </div>
 
 </div>
@@ -512,13 +492,23 @@ Visit Facebook Profile
 
 <div class="visitors">
 
-<h3>Visitors</h3>
+<h3>Website Visitors</h3>
 
 <br>
 
 <a href="https://www.freecounterstat.com">
-<img src="https://counter11.optistats.ovh/private/freecounterstat.php?c=yk5cwj5zum9zh27nb7mgjm7hjuqltswp">
+
+<img src="https://counter11.optistats.ovh/private/freecounterstat.php?c=yk5cwj5zum9zh27nb7mgjm7hjuqltswp"
+border="0"
+alt="website counter">
+
 </a>
+
+<br><br>
+
+<p>
+Thank you for visiting my website.
+</p>
 
 </div>
 
@@ -540,19 +530,19 @@ Official Strength & Fitness Portfolio
 
 </footer>
 
-<div class="lightbox" id="lightbox" onclick="closeImg()">
-<img id="lightbox-img">
+<div class="lightbox" id="box" onclick="hide()">
+<img id="img">
 </div>
 
 <script>
 
-function openImg(src){
-document.getElementById('lightbox').style.display='flex';
-document.getElementById('lightbox-img').src=src;
+function show(src){
+document.getElementById('box').style.display='flex';
+document.getElementById('img').src=src;
 }
 
-function closeImg(){
-document.getElementById('lightbox').style.display='none';
+function hide(){
+document.getElementById('box').style.display='none';
 }
 
 </script>
