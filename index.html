@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Natalia Athlete | Official Strength & Fitness Portfolio</title>
-
-<meta name="description"
-content="Official portfolio of Natalia Athlete. Strength, Fitness, Flexibility and Lifestyle.">
+<title>Natalia Athlete | Official Portfolio</title>
+<meta name="description" content="Official portfolio of Natalia, strength and fitness athlete from Canada.">
 
 <style>
 
@@ -24,9 +20,9 @@ scroll-behavior:smooth;
 }
 
 body{
-font-family:Arial,Helvetica,sans-serif;
 background:#000;
-color:white;
+color:#fff;
+font-family:Arial,Helvetica,sans-serif;
 overflow-x:hidden;
 }
 
@@ -36,20 +32,20 @@ nav{
 position:fixed;
 top:0;
 width:100%;
-background:rgba(0,0,0,.92);
-backdrop-filter:blur(10px);
-padding:18px;
+background:#000;
+padding:20px;
 display:flex;
 justify-content:center;
-gap:35px;
-z-index:999;
+gap:40px;
+z-index:1000;
+box-shadow:0 0 20px rgba(255,255,255,.1);
 }
 
 nav a{
 color:white;
 text-decoration:none;
-font-weight:700;
-font-size:16px;
+font-weight:bold;
+font-size:18px;
 }
 
 nav a:hover{
@@ -62,7 +58,7 @@ opacity:.7;
 height:100vh;
 background:
 linear-gradient(rgba(0,0,0,.45),
-rgba(0,0,0,.85)),
+rgba(0,0,0,.8)),
 url('hero.jpg');
 background-size:cover;
 background-position:center;
@@ -73,12 +69,12 @@ text-align:center;
 }
 
 .hero h1{
-font-size:clamp(50px,10vw,90px);
+font-size:70px;
 font-weight:900;
 }
 
 .hero p{
-font-size:clamp(20px,3vw,30px);
+font-size:24px;
 margin-top:20px;
 color:#ddd;
 }
@@ -86,9 +82,9 @@ color:#ddd;
 /* GENERAL */
 
 section{
+padding:100px 25px;
 max-width:1400px;
 margin:auto;
-padding:100px 20px;
 }
 
 h2{
@@ -99,25 +95,27 @@ margin-bottom:50px;
 
 /* ABOUT */
 
-.about{
-text-align:center;
+.profile{
+display:flex;
+justify-content:center;
+margin-bottom:40px;
 }
 
-.about img{
+.profile img{
 width:220px;
 height:220px;
-border-radius:50%;
 object-fit:cover;
+border-radius:50%;
 border:5px solid white;
 box-shadow:0 0 30px rgba(255,255,255,.2);
 }
 
-.about p{
-max-width:1000px;
-margin:40px auto;
-font-size:20px;
+.about-text{
+font-size:22px;
 line-height:1.8;
-color:#ddd;
+text-align:center;
+max-width:1000px;
+margin:auto;
 }
 
 /* STATS */
@@ -127,7 +125,7 @@ display:grid;
 grid-template-columns:
 repeat(auto-fit,minmax(220px,1fr));
 gap:25px;
-margin-top:50px;
+margin-top:60px;
 }
 
 .card{
@@ -135,46 +133,44 @@ background:#111;
 padding:35px;
 border-radius:20px;
 text-align:center;
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
+box-shadow:0 0 20px rgba(255,255,255,.05);
 }
 
 .card h3{
-font-size:40px;
+font-size:36px;
 margin-bottom:10px;
 }
 
-.card p{
-color:#ccc;
+.card h4{
+font-size:20px;
+color:#bbb;
+margin-bottom:10px;
 }
 
 /* GALLERY */
 
 .category{
-margin-top:80px;
+margin-top:90px;
 }
 
 .category h3{
+font-size:36px;
 text-align:center;
-font-size:34px;
 margin-bottom:30px;
 }
 
 .gallery{
 display:grid;
 grid-template-columns:
-repeat(auto-fit,minmax(280px,1fr));
+repeat(auto-fit,minmax(300px,1fr));
 gap:25px;
 }
 
 .gallery img{
 width:100%;
 border-radius:20px;
-cursor:pointer;
 transition:.3s;
+cursor:pointer;
 }
 
 .gallery img:hover{
@@ -184,70 +180,27 @@ transform:scale(1.03);
 /* CONTACT */
 
 .contact{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:30px;
-}
-
-.contact-box{
-background:#111;
-padding:30px;
-border-radius:20px;
-width:320px;
 text-align:center;
+font-size:22px;
+line-height:2;
 }
 
-.contact-box a{
+.contact a{
 color:white;
 text-decoration:none;
-}
-
-/* VISITOR */
-
-.visitor{
-background:#111;
-padding:30px;
-border-radius:20px;
-text-align:center;
-margin-top:50px;
 }
 
 /* FOOTER */
 
 footer{
-background:#111;
-padding:60px;
+padding:50px;
 text-align:center;
+color:#999;
 margin-top:80px;
-color:#aaa;
-}
-
-/* LIGHTBOX */
-
-.lightbox{
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.96);
-justify-content:center;
-align-items:center;
-z-index:9999;
-}
-
-.lightbox img{
-max-width:95%;
-max-height:95%;
-border-radius:15px;
 }
 
 </style>
-
 </head>
-
 <body>
 
 <nav>
@@ -258,89 +211,93 @@ border-radius:15px;
 </nav>
 
 <section class="hero" id="home">
-
 <div>
-
 <h1>Natalia Athlete</h1>
-
-<p>
-Strength • Fitness • Flexibility • Lifestyle
-</p>
-
+<p>Strength • Fitness • Athletic Performance</p>
 </div>
-
 </section>
 
 <section id="about">
 
-<h2>About Me</h2>
-
-<div class="about">
-
+<div class="profile">
 <img src="profil.jpg">
+</div>
+
+<div class="about-text">
+
+<p><b>Hello and welcome to my website!</b></p>
+<br>
 
 <p>
+My name is Natalia, and I am a strength and fitness athlete from Canada.
+I am 155 cm (5'1") tall and have dedicated many years of my life to building strength,
+athletic performance, and a physique that reflects my passion for training.
+</p>
 
-Hello and welcome to my website!
+<br>
 
-<br><br>
-
-My name is Natalia, and I am a strength and fitness athlete from Canada. I am 155 cm tall and have dedicated many years of my life to building strength, athletic performance, and a physique that reflects my passion for training.
-
-<br><br>
-
-Fitness is more than a hobby for me — it is a lifestyle. Through years of consistent training, discipline, and dedication, I have developed a physique that combines muscularity, strength, athleticism, and mobility.
-
+<p>
+Fitness is more than a hobby for me – it is a lifestyle.
+Through years of consistent training, discipline, and dedication,
+I have developed a physique that combines muscularity,
+strength, athleticism, and mobility.
 </p>
 
 </div>
-
-<h2>My Athletic Stats</h2>
 
 <div class="stats">
 
 <div class="card">
 <h3>155 cm</h3>
+<h4>5'1"</h4>
 <p>Height</p>
 </div>
 
 <div class="card">
 <h3>75 kg</h3>
+<h4>165 lbs</h4>
 <p>Body Weight</p>
 </div>
 
 <div class="card">
 <h3>120 cm</h3>
+<h4>47.2"</h4>
 <p>Shoulders</p>
 </div>
 
 <div class="card">
 <h3>101 cm</h3>
+<h4>39.8"</h4>
 <p>Chest</p>
 </div>
 
 <div class="card">
 <h3>68 cm</h3>
+<h4>26.8"</h4>
 <p>Waist</p>
 </div>
 
 <div class="card">
 <h3>41 cm</h3>
+<h4>16.1"</h4>
 <p>Upper Arm</p>
 </div>
 
 <div class="card">
 <h3>32 cm</h3>
+<h4>12.6"</h4>
 <p>Forearm</p>
 </div>
 
 <div class="card">
 <h3>72 cm</h3>
+<h4>28.3"</h4>
 <p>Thigh</p>
 </div>
 
 <div class="card">
 <h3>42 cm</h3>
+<h4>16.5"</h4>
 <p>Calf</p>
 </div>
 
@@ -353,56 +310,30 @@ Fitness is more than a hobby for me — it is a lifestyle. Through years of cons
 <h2>Gallery</h2>
 
 <div class="category">
-
 <h3>💪 Strength</h3>
-
 <div class="gallery">
-
-<img src="bodyposes.jpg" onclick="show(this.src)">
-<img src="ufc.jpg" onclick="show(this.src)">
-
+<img src="bodyposes.jpg">
+<img src="ufc.jpg">
+<img src="bodensee_front.jpg">
+<img src="bodensee_back.jpg">
 </div>
-
 </div>
 
 <div class="category">
-
 <h3>🤸 Flexibility</h3>
-
 <div class="gallery">
-
-<img src="split_front.jpg" onclick="show(this.src)">
-<img src="split_side.jpg" onclick="show(this.src)">
-
+<img src="split_front.jpg">
+<img src="split_side.jpg">
 </div>
-
 </div>
 
 <div class="category">
-
 <h3>🌎 Fitness & Lifestyle</h3>
-
 <div class="gallery">
-
-<img src="canada.jpg" onclick="show(this.src)">
-<img src="montreal.jpg" onclick="show(this.src)">
-<img src="white.jpg" onclick="show(this.src)">
-
+<img src="canada.jpg">
+<img src="montreal.jpg">
+<img src="white.jpg">
 </div>
-
-</div>
-
-<div class="category">
-
-<h3>🌊 Lake Constance</h3>
-
-<div class="gallery">
-
-<img src="bodensee_front.jpg" onclick="show(this.src)">
-<img src="bodensee_back.jpg" onclick="show(this.src)">
-
-</div>
-
 </div>
 
 </section>
@@ -413,78 +344,25 @@ Fitness is more than a hobby for me — it is a lifestyle. Through years of cons
 
 <div class="contact">
 
-<div class="contact-box">
-
-<h3>Email</h3>
-
-<br>
-
+<p>📧
 <a href="mailto:n.wilke07.07.1990@gmail.com">
 n.wilke07.07.1990@gmail.com
 </a>
+</p>
 
-</div>
-
-<div class="contact-box">
-
-<h3>Facebook</h3>
-
-<br>
-
+<p>📱
 <a href="https://www.facebook.com/share/1X6FkWDyvQ/" target="_blank">
-Visit Facebook Profile
+Facebook Profile
 </a>
-
-</div>
-
-</div>
-
-<div class="visitor">
-
-<h3>Visitors</h3>
-
-<br>
-
-<a href="https://www.freecounterstat.com">
-<img src="https://counter11.optistats.ovh/private/freecounterstat.php?c=yk5cwj5zum9zh27nb7mgjm7hjuqltswp">
-</a>
+</p>
 
 </div>
 
 </section>
 
 <footer>
-
-<h2>Natalia Athlete</h2>
-
-<p>
-Official Strength & Fitness Portfolio
-</p>
-
-<br>
-
-<p>
-© 2026 Natalia Athlete
-</p>
-
+© 2026 Natalia Athlete | Official Portfolio
 </footer>
-
-<div class="lightbox" id="box" onclick="hide()">
-<img id="img">
-</div>
-
-<script>
-
-function show(src){
-document.getElementById('box').style.display='flex';
-document.getElementById('img').src=src;
-}
-
-function hide(){
-document.getElementById('box').style.display='none';
-}
-
-</script>
 
 </body>
 </html>
