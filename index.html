@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -23,9 +22,9 @@ scroll-behavior:smooth;
 }
 
 body{
+font-family:Arial,Helvetica,sans-serif;
 background:#000;
 color:#fff;
-font-family:Arial,Helvetica,sans-serif;
 overflow-x:hidden;
 }
 
@@ -35,12 +34,12 @@ nav{
 position:fixed;
 top:0;
 width:100%;
+padding:20px;
 background:rgba(0,0,0,.95);
 backdrop-filter:blur(10px);
-padding:20px;
 display:flex;
 justify-content:center;
-gap:35px;
+gap:30px;
 z-index:1000;
 }
 
@@ -60,7 +59,7 @@ opacity:.7;
 .hero{
 height:100vh;
 background:
-linear-gradient(rgba(0,0,0,.4),
+linear-gradient(rgba(0,0,0,.45),
 rgba(0,0,0,.85)),
 url('hero.jpg');
 background-size:cover;
@@ -74,6 +73,7 @@ text-align:center;
 .hero h1{
 font-size:clamp(50px,10vw,100px);
 font-weight:900;
+letter-spacing:2px;
 }
 
 .hero p{
@@ -91,12 +91,18 @@ padding:100px 20px;
 }
 
 h2{
-text-align:center;
 font-size:50px;
+text-align:center;
 margin-bottom:50px;
 }
 
-/* ABOUT */
+h3{
+font-size:32px;
+text-align:center;
+margin:50px 0 30px;
+}
+
+/* PROFILE */
 
 .profile{
 display:flex;
@@ -124,18 +130,12 @@ color:#ddd;
 
 /* STATS */
 
-.stats-title{
-text-align:center;
-font-size:32px;
-margin-top:60px;
-margin-bottom:30px;
-}
-
 .stats{
 display:grid;
 grid-template-columns:
 repeat(auto-fit,minmax(220px,1fr));
 gap:25px;
+margin-top:30px;
 }
 
 .card{
@@ -144,14 +144,15 @@ padding:30px;
 border-radius:20px;
 text-align:center;
 transition:.3s;
+box-shadow:0 0 20px rgba(255,255,255,.05);
 }
 
 .card:hover{
 transform:translateY(-5px);
 }
 
-.card h3{
-font-size:32px;
+.card h4{
+font-size:34px;
 margin-bottom:10px;
 }
 
@@ -160,16 +161,34 @@ color:#ccc;
 line-height:1.5;
 }
 
+/* PROGRESS */
+
+.progress{
+max-width:700px;
+margin:20px auto;
+}
+
+.progress-title{
+margin:20px 0 8px;
+font-size:20px;
+}
+
+.bar{
+height:22px;
+background:#222;
+border-radius:20px;
+overflow:hidden;
+}
+
+.fill{
+height:100%;
+background:white;
+}
+
 /* GALLERY */
 
 .category{
 margin-top:80px;
-}
-
-.category h3{
-text-align:center;
-font-size:32px;
-margin-bottom:30px;
 }
 
 .gallery{
@@ -177,6 +196,10 @@ display:grid;
 grid-template-columns:
 repeat(auto-fit,minmax(280px,1fr));
 gap:25px;
+}
+
+.gallery figure{
+margin:0;
 }
 
 .gallery img{
@@ -188,6 +211,12 @@ transition:.3s;
 
 .gallery img:hover{
 transform:scale(1.03);
+}
+
+.gallery figcaption{
+text-align:center;
+margin-top:10px;
+color:#ccc;
 }
 
 /* CONTACT */
@@ -228,8 +257,8 @@ footer{
 background:#111;
 padding:60px;
 text-align:center;
-margin-top:100px;
-color:#999;
+margin-top:80px;
+color:#aaa;
 }
 
 /* LIGHTBOX */
@@ -253,21 +282,22 @@ max-height:95%;
 border-radius:15px;
 }
 
-@media(max-width:768px){
+/* TOP BUTTON */
 
-nav{
-gap:15px;
-flex-wrap:wrap;
-}
-
-h2{
-font-size:38px;
-}
-
+#topBtn{
+position:fixed;
+bottom:20px;
+right:20px;
+width:55px;
+height:55px;
+border:none;
+border-radius:50%;
+background:white;
+font-size:22px;
+cursor:pointer;
 }
 
 </style>
-
 </head>
 
 <body>
@@ -286,13 +316,19 @@ font-size:38px;
 <h1>NATALIA ATHLETE</h1>
 
 <p>
+Professional Strength & Fitness Athlete
+</p>
+
+<br>
+
+<p>
 Strength • Fitness • Athletic Performance
 </p>
 
 <br>
 
 <p>
-Canadian Strength Athlete
+🇨🇦 Canadian Strength Athlete
 </p>
 
 </div>
@@ -309,99 +345,162 @@ Canadian Strength Athlete
 
 <div class="about">
 
+<p>Hello and welcome to my website!</p>
+
+<br>
+
 <p>
-Hello and welcome to my website!
+My name is Natalia, and I am a strength and fitness athlete from Canada.
+I am 155 cm (5'1") tall and have dedicated many years of my life to building strength,
+athletic performance, and a physique that reflects my passion for training.
 </p>
 
 <br>
 
 <p>
-My name is Natalia, and I am a strength and fitness athlete from Canada. I am 155 cm (5'1") tall and have dedicated many years of my life to building strength, athletic performance, and a physique that reflects my passion for training.
-</p>
-
-<br>
-
-<p>
-Fitness is more than a hobby — it is a lifestyle. Through years of consistent training, discipline, and dedication, I have developed a physique that combines muscularity, strength, athleticism, and mobility.
+Fitness is more than a hobby — it is a lifestyle.
+Through years of consistent training, discipline, and dedication,
+I have developed a physique that combines muscularity,
+strength, athleticism, and mobility.
 </p>
 
 </div>
 
-<div class="stats-title">
-Physical Stats
-</div>
+<h3>Physical Stats</h3>
 
 <div class="stats">
 
 <div class="card">
-<h3>155 cm</h3>
+<h4>155 cm</h4>
 <p>5'1"</p>
 <p>Height</p>
 </div>
 
 <div class="card">
-<h3>75 kg</h3>
+<h4>75 kg</h4>
 <p>165 lbs</p>
 <p>Body Weight</p>
 </div>
 
 </div>
 
-<div class="stats-title">
-Body Measurements
-</div>
+<h3>Body Measurements</h3>
 
 <div class="stats">
 
 <div class="card">
-<h3>120 cm</h3>
+<h4>120 cm</h4>
 <p>47.2"</p>
 <p>Shoulders</p>
 </div>
 
 <div class="card">
-<h3>101 cm</h3>
+<h4>101 cm</h4>
 <p>39.8"</p>
 <p>Chest</p>
 </div>
 
 <div class="card">
-<h3>68 cm</h3>
+<h4>68 cm</h4>
 <p>26.8"</p>
 <p>Waist</p>
 </div>
 
 </div>
 
-<div class="stats-title">
-Muscle Measurements
-</div>
+<h3>Muscle Measurements</h3>
 
 <div class="stats">
 
 <div class="card">
-<h3>41 cm</h3>
+<h4>41 cm</h4>
 <p>16.1"</p>
 <p>Upper Arm</p>
 </div>
 
 <div class="card">
-<h3>32 cm</h3>
+<h4>32 cm</h4>
 <p>12.6"</p>
 <p>Forearm</p>
 </div>
 
 <div class="card">
-<h3>72 cm</h3>
+<h4>72 cm</h4>
 <p>28.3"</p>
 <p>Thigh</p>
 </div>
 
 <div class="card">
-<h3>42 cm</h3>
+<h4>42 cm</h4>
 <p>16.5"</p>
 <p>Calf</p>
 </div>
+
+</div>
+
+<h2>Training Philosophy</h2>
+
+<div class="about">
+
+<p>
+I believe that success comes from consistency, discipline and passion.
+My training focuses on strength, muscularity, athletic performance,
+flexibility and overall physical conditioning.
+</p>
+
+<br>
+
+<p>
+My strongest body parts are my legs, calves, shoulders and back,
+which have always responded exceptionally well to training.
+</p>
+
+</div>
+
+<h2>Athletic Achievements</h2>
+
+<div class="stats">
+
+<div class="card">
+<h4>15+</h4>
+<p>Years of Training</p>
+</div>
+
+<div class="card">
+<h4>5000+</h4>
+<p>Training Sessions</p>
+</div>
+
+<div class="card">
+<h4>100%</h4>
+<p>Dedication</p>
+</div>
+
+<div class="card">
+<h4>24/7</h4>
+<p>Fitness Lifestyle</p>
+</div>
+
+</div>
+
+<h2>Favorite Muscle Groups</h2>
+
+<div class="progress">
+
+<div class="progress-title">Leg Development — 100%</div>
+<div class="bar"><div class="fill" style="width:100%"></div></div>
+
+<div class="progress-title">Calves — 100%</div>
+<div class="bar"><div class="fill" style="width:100%"></div></div>
+
+<div class="progress-title">Shoulders — 95%</div>
+<div class="bar"><div class="fill" style="width:95%"></div></div>
+
+<div class="progress-title">Back Development — 95%</div>
+<div class="bar"><div class="fill" style="width:95%"></div></div>
+
+<div class="progress-title">Flexibility — 85%</div>
+<div class="bar"><div class="fill" style="width:85%"></div></div>
 
 </div>
 
@@ -412,48 +511,76 @@ Muscle Measurements
 <h2>Gallery</h2>
 
 <div class="category">
-
 <h3>💪 Strength</h3>
-
 <div class="gallery">
+
+<figure>
 <img src="bodyposes.jpg" onclick="show(this.src)">
+<figcaption>Bodybuilding Posing</figcaption>
+</figure>
+
+<figure>
 <img src="ufc.jpg" onclick="show(this.src)">
-</div>
+<figcaption>Competition Style</figcaption>
+</figure>
 
+</div>
 </div>
 
 <div class="category">
-
 <h3>🤸 Flexibility</h3>
-
 <div class="gallery">
+
+<figure>
 <img src="split_front.jpg" onclick="show(this.src)">
+<figcaption>Front Split</figcaption>
+</figure>
+
+<figure>
 <img src="split_side.jpg" onclick="show(this.src)">
-</div>
+<figcaption>Side Split</figcaption>
+</figure>
 
+</div>
 </div>
 
 <div class="category">
-
 <h3>🌎 Lifestyle</h3>
-
 <div class="gallery">
-<img src="canada.jpg" onclick="show(this.src)">
-<img src="montreal.jpg" onclick="show(this.src)">
-<img src="white.jpg" onclick="show(this.src)">
-</div>
 
+<figure>
+<img src="canada.jpg" onclick="show(this.src)">
+<figcaption>Canada</figcaption>
+</figure>
+
+<figure>
+<img src="montreal.jpg" onclick="show(this.src)">
+<figcaption>Montreal</figcaption>
+</figure>
+
+<figure>
+<img src="white.jpg" onclick="show(this.src)">
+<figcaption>Fitness Lifestyle</figcaption>
+</figure>
+
+</div>
 </div>
 
 <div class="category">
-
 <h3>🌊 Lake Constance</h3>
-
 <div class="gallery">
-<img src="bodensee_front.jpg" onclick="show(this.src)">
-<img src="bodensee_back.jpg" onclick="show(this.src)">
-</div>
 
+<figure>
+<img src="bodensee_front.jpg" onclick="show(this.src)">
+<figcaption>Lake Constance Photoshoot</figcaption>
+</figure>
+
+<figure>
+<img src="bodensee_back.jpg" onclick="show(this.src)">
+<figcaption>Bodensee Lifestyle</figcaption>
+</figure>
+
+</div>
 </div>
 
 </section>
@@ -465,27 +592,19 @@ Muscle Measurements
 <div class="contact">
 
 <div class="contact-box">
-
 <h3>Email</h3>
-
 <br>
-
 <a href="mailto:n.wilke07.07.1990@gmail.com">
 n.wilke07.07.1990@gmail.com
 </a>
-
 </div>
 
 <div class="contact-box">
-
 <h3>Facebook</h3>
-
 <br>
-
 <a href="https://www.facebook.com/share/1X6FkWDyvQ/" target="_blank">
 Visit Facebook Profile
 </a>
-
 </div>
 
 </div>
@@ -497,11 +616,7 @@ Visit Facebook Profile
 <br>
 
 <a href="https://www.freecounterstat.com">
-
-<img src="https://counter11.optistats.ovh/private/freecounterstat.php?c=yk5cwj5zum9zh27nb7mgjm7hjuqltswp"
-border="0"
-alt="website counter">
-
+<img src="https://counter11.optistats.ovh/private/freecounterstat.php?c=yk5cwj5zum9zh27nb7mgjm7hjuqltswp">
 </a>
 
 <br><br>
@@ -533,6 +648,11 @@ Official Strength & Fitness Portfolio
 <div class="lightbox" id="box" onclick="hide()">
 <img id="img">
 </div>
+
+<button id="topBtn"
+onclick="window.scrollTo({top:0,behavior:'smooth'})">
+↑
+</button>
 
 <script>
 
