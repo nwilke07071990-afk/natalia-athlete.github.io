@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Natalia Athlete | Official Portfolio</title>
-<meta name="description" content="Official portfolio of Natalia, strength and fitness athlete from Canada.">
+<title>Natalia Athlete | Official Strength & Fitness Portfolio</title>
+
+<meta name="description"
+content="Official portfolio of Natalia, strength and fitness athlete from Canada.">
 
 <style>
 
@@ -20,9 +24,9 @@ scroll-behavior:smooth;
 }
 
 body{
+font-family:Arial,Helvetica,sans-serif;
 background:#000;
 color:#fff;
-font-family:Arial,Helvetica,sans-serif;
 overflow-x:hidden;
 }
 
@@ -32,12 +36,13 @@ nav{
 position:fixed;
 top:0;
 width:100%;
-background:#000;
+background:rgba(0,0,0,.95);
 padding:20px;
 display:flex;
 justify-content:center;
-gap:40px;
+gap:35px;
 z-index:1000;
+backdrop-filter:blur(10px);
 box-shadow:0 0 20px rgba(255,255,255,.1);
 }
 
@@ -45,7 +50,8 @@ nav a{
 color:white;
 text-decoration:none;
 font-weight:bold;
-font-size:18px;
+font-size:17px;
+transition:.3s;
 }
 
 nav a:hover{
@@ -57,8 +63,8 @@ opacity:.7;
 .hero{
 height:100vh;
 background:
-linear-gradient(rgba(0,0,0,.45),
-rgba(0,0,0,.8)),
+linear-gradient(rgba(0,0,0,.4),
+rgba(0,0,0,.85)),
 url('hero.jpg');
 background-size:cover;
 background-position:center;
@@ -69,12 +75,12 @@ text-align:center;
 }
 
 .hero h1{
-font-size:70px;
+font-size:clamp(50px,10vw,100px);
 font-weight:900;
 }
 
 .hero p{
-font-size:24px;
+font-size:clamp(20px,3vw,30px);
 margin-top:20px;
 color:#ddd;
 }
@@ -82,14 +88,14 @@ color:#ddd;
 /* GENERAL */
 
 section{
-padding:100px 25px;
 max-width:1400px;
 margin:auto;
+padding:100px 20px;
 }
 
 h2{
-font-size:50px;
 text-align:center;
+font-size:50px;
 margin-bottom:50px;
 }
 
@@ -110,67 +116,80 @@ border:5px solid white;
 box-shadow:0 0 30px rgba(255,255,255,.2);
 }
 
-.about-text{
-font-size:22px;
-line-height:1.8;
-text-align:center;
+.about{
 max-width:1000px;
 margin:auto;
+text-align:center;
+font-size:20px;
+line-height:1.8;
+color:#ddd;
 }
 
 /* STATS */
+
+.stats-group{
+margin-top:60px;
+}
+
+.stats-group h3{
+text-align:center;
+font-size:32px;
+margin-bottom:30px;
+}
 
 .stats{
 display:grid;
 grid-template-columns:
 repeat(auto-fit,minmax(220px,1fr));
 gap:25px;
-margin-top:60px;
 }
 
 .card{
 background:#111;
-padding:35px;
+padding:30px;
 border-radius:20px;
 text-align:center;
 box-shadow:0 0 20px rgba(255,255,255,.05);
+transition:.3s;
 }
 
-.card h3{
-font-size:36px;
-margin-bottom:10px;
+.card:hover{
+transform:translateY(-5px);
 }
 
 .card h4{
-font-size:20px;
-color:#bbb;
+font-size:32px;
 margin-bottom:10px;
+}
+
+.card p{
+color:#ccc;
 }
 
 /* GALLERY */
 
 .category{
-margin-top:90px;
+margin-top:80px;
 }
 
 .category h3{
-font-size:36px;
 text-align:center;
+font-size:32px;
 margin-bottom:30px;
 }
 
 .gallery{
 display:grid;
 grid-template-columns:
-repeat(auto-fit,minmax(300px,1fr));
+repeat(auto-fit,minmax(280px,1fr));
 gap:25px;
 }
 
 .gallery img{
 width:100%;
 border-radius:20px;
-transition:.3s;
 cursor:pointer;
+transition:.3s;
 }
 
 .gallery img:hover{
@@ -180,27 +199,83 @@ transform:scale(1.03);
 /* CONTACT */
 
 .contact{
-text-align:center;
-font-size:22px;
-line-height:2;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:30px;
 }
 
-.contact a{
+.contact-box{
+background:#111;
+padding:30px;
+border-radius:20px;
+width:320px;
+text-align:center;
+}
+
+.contact-box a{
 color:white;
 text-decoration:none;
+}
+
+/* VISITORS */
+
+.visitors{
+background:#111;
+padding:30px;
+border-radius:20px;
+text-align:center;
+margin-top:50px;
 }
 
 /* FOOTER */
 
 footer{
-padding:50px;
+background:#111;
+padding:60px;
 text-align:center;
-color:#999;
 margin-top:80px;
+color:#999;
+}
+
+/* LIGHTBOX */
+
+.lightbox{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.96);
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+.lightbox img{
+max-width:95%;
+max-height:95%;
+border-radius:15px;
+}
+
+@media(max-width:768px){
+
+nav{
+gap:15px;
+flex-wrap:wrap;
+}
+
+h2{
+font-size:38px;
+}
+
 }
 
 </style>
+
 </head>
+
 <body>
 
 <nav>
@@ -211,129 +286,194 @@ margin-top:80px;
 </nav>
 
 <section class="hero" id="home">
+
 <div>
-<h1>Natalia Athlete</h1>
-<p>Strength • Fitness • Athletic Performance</p>
+
+<h1>NATALIA ATHLETE</h1>
+
+<p>
+Strength • Fitness • Athletic Performance
+</p>
+
+<br>
+
+<p>
+Canadian Strength Athlete
+</p>
+
 </div>
+
 </section>
 
 <section id="about">
+
+<h2>About Me</h2>
 
 <div class="profile">
 <img src="profil.jpg">
 </div>
 
-<div class="about-text">
+<div class="about">
 
-<p><b>Hello and welcome to my website!</b></p>
+<p>
+Hello and welcome to my website!
+</p>
+
 <br>
 
 <p>
 My name is Natalia, and I am a strength and fitness athlete from Canada.
-I am 155 cm (5'1") tall and have dedicated many years of my life to building strength,
-athletic performance, and a physique that reflects my passion for training.
+I am 155 cm (5'1") tall and have dedicated many years of my life to building strength, athletic performance, and a physique that reflects my passion for training.
 </p>
 
 <br>
 
 <p>
-Fitness is more than a hobby for me – it is a lifestyle.
-Through years of consistent training, discipline, and dedication,
-I have developed a physique that combines muscularity,
-strength, athleticism, and mobility.
+Fitness is more than a hobby for me — it is a lifestyle.
+Through years of consistent training, discipline, and dedication, I have developed a physique that combines muscularity, strength, athleticism, and mobility.
 </p>
 
 </div>
 
+<div class="stats-group">
+
+<h3>Physical Stats</h3>
+
 <div class="stats">
 
 <div class="card">
-<h3>155 cm</h3>
-<h4>5'1"</h4>
+<h4>155 cm</h4>
+<p>5'1"</p>
 <p>Height</p>
 </div>
 
 <div class="card">
-<h3>75 kg</h3>
-<h4>165 lbs</h4>
+<h4>75 kg</h4>
+<p>165 lbs</p>
 <p>Body Weight</p>
 </div>
 
+</div>
+
+</div>
+
+<div class="stats-group">
+
+<h3>Body Measurements</h3>
+
+<div class="stats">
+
 <div class="card">
-<h3>120 cm</h3>
-<h4>47.2"</h4>
+<h4>120 cm</h4>
+<p>47.2"</p>
 <p>Shoulders</p>
 </div>
 
 <div class="card">
-<h3>101 cm</h3>
-<h4>39.8"</h4>
+<h4>101 cm</h4>
+<p>39.8"</p>
 <p>Chest</p>
 </div>
 
 <div class="card">
-<h3>68 cm</h3>
-<h4>26.8"</h4>
+<h4>68 cm</h4>
+<p>26.8"</p>
 <p>Waist</p>
 </div>
 
+</div>
+
+</div>
+
+<div class="stats-group">
+
+<h3>Muscle Measurements</h3>
+
+<div class="stats">
+
 <div class="card">
-<h3>41 cm</h3>
-<h4>16.1"</h4>
+<h4>41 cm</h4>
+<p>16.1"</p>
 <p>Upper Arm</p>
 </div>
 
 <div class="card">
-<h3>32 cm</h3>
-<h4>12.6"</h4>
+<h4>32 cm</h4>
+<p>12.6"</p>
 <p>Forearm</p>
 </div>
 
 <div class="card">
-<h3>72 cm</h3>
-<h4>28.3"</h4>
+<h4>72 cm</h4>
+<p>28.3"</p>
 <p>Thigh</p>
 </div>
 
 <div class="card">
-<h3>42 cm</h3>
-<h4>16.5"</h4>
+<h4>42 cm</h4>
+<p>16.5"</p>
 <p>Calf</p>
 </div>
 
 </div>
 
-</section>
+</div>
 
 <section id="gallery">
 
 <h2>Gallery</h2>
 
 <div class="category">
+
 <h3>💪 Strength</h3>
+
 <div class="gallery">
-<img src="bodyposes.jpg">
-<img src="ufc.jpg">
-<img src="bodensee_front.jpg">
-<img src="bodensee_back.jpg">
+
+<img src="bodyposes.jpg" onclick="openImg(this.src)">
+<img src="ufc.jpg" onclick="openImg(this.src)">
+
 </div>
+
 </div>
 
 <div class="category">
+
 <h3>🤸 Flexibility</h3>
+
 <div class="gallery">
-<img src="split_front.jpg">
-<img src="split_side.jpg">
+
+<img src="split_front.jpg" onclick="openImg(this.src)">
+<img src="split_side.jpg" onclick="openImg(this.src)">
+
 </div>
+
 </div>
 
 <div class="category">
-<h3>🌎 Fitness & Lifestyle</h3>
+
+<h3>🌎 Lifestyle</h3>
+
 <div class="gallery">
-<img src="canada.jpg">
-<img src="montreal.jpg">
-<img src="white.jpg">
+
+<img src="canada.jpg" onclick="openImg(this.src)">
+<img src="montreal.jpg" onclick="openImg(this.src)">
+<img src="white.jpg" onclick="openImg(this.src)">
+
 </div>
+
+</div>
+
+<div class="category">
+
+<h3>🌊 Lake Constance</h3>
+
+<div class="gallery">
+
+<img src="bodensee_front.jpg" onclick="openImg(this.src)">
+<img src="bodensee_back.jpg" onclick="openImg(this.src)">
+
+</div>
+
 </div>
 
 </section>
@@ -344,25 +484,78 @@ strength, athleticism, and mobility.
 
 <div class="contact">
 
-<p>📧
+<div class="contact-box">
+
+<h3>Email</h3>
+
+<br>
+
 <a href="mailto:n.wilke07.07.1990@gmail.com">
 n.wilke07.07.1990@gmail.com
 </a>
-</p>
 
-<p>📱
+</div>
+
+<div class="contact-box">
+
+<h3>Facebook</h3>
+
+<br>
+
 <a href="https://www.facebook.com/share/1X6FkWDyvQ/" target="_blank">
-Facebook Profile
+Visit Facebook Profile
 </a>
-</p>
+
+</div>
+
+</div>
+
+<div class="visitors">
+
+<h3>Visitors</h3>
+
+<br>
+
+<a href="https://www.freecounterstat.com">
+<img src="https://counter11.optistats.ovh/private/freecounterstat.php?c=yk5cwj5zum9zh27nb7mgjm7hjuqltswp">
+</a>
 
 </div>
 
 </section>
 
 <footer>
-© 2026 Natalia Athlete | Official Portfolio
+
+<h2>Natalia Athlete</h2>
+
+<p>
+Official Strength & Fitness Portfolio
+</p>
+
+<br>
+
+<p>
+© 2026 Natalia Athlete
+</p>
+
 </footer>
+
+<div class="lightbox" id="lightbox" onclick="closeImg()">
+<img id="lightbox-img">
+</div>
+
+<script>
+
+function openImg(src){
+document.getElementById('lightbox').style.display='flex';
+document.getElementById('lightbox-img').src=src;
+}
+
+function closeImg(){
+document.getElementById('lightbox').style.display='none';
+}
+
+</script>
 
 </body>
 </html>
